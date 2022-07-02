@@ -1,0 +1,12 @@
+.home-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  color: $color-black !important;
+  text-align: center;
+  margin: 100px 0;
+
+  @include respond-below(sm){
+    margin-top: 200px;
+  }
+}

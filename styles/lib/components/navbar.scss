@@ -1,0 +1,86 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  background: transparent;
+
+  @include respond-below(sm) {
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 50px -10px rgb(0 0 0 / 61%);
+    background: $color-white;
+  }
+
+  .container{
+    @include respond-below(sm){
+      padding: 0;
+    }
+  }
+
+  &.active {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  &-brand {
+    @include respond-below(sm) {
+      padding: 20px;
+    }
+  }
+
+  .nav-link {
+    margin-right: 30px;
+    position: relative;
+    color: blue;
+
+    @include respond-below(sm) {
+      color: $color-white;
+      margin: 0 !important;
+      padding: 10px;
+    }
+
+    &.active {
+      color: blue;
+
+      .fa {
+        @include respond-below(sm) {
+          display: none;
+        }
+      }
+
+      @include respond-below(sm) {
+        background: $color-white;
+        color: black;
+        border-bottom-left-radius: 25px;
+        border-top-left-radius: 25px;
+        padding-left: 20px;
+      }
+
+      &:before, &:after {
+        @include respond-below(sm) {
+          content: "";
+          width: 20px;
+          height: 20px;
+          right: 0;
+          position: absolute;
+          z-index: 999999;
+        }
+      }
+
+      @include respond-below(sm) {
+        &:before {
+          top: -20px;
+          background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M0 20 Q20 20 20 0 L20 20Z" /></svg>');
+        }
+
+        &:after {
+          bottom: -20px;
+          background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M0 0 Q20 0 20 20 L20 0Z" /></svg>');
+        }
+      }
+    }
+  }
+}
+

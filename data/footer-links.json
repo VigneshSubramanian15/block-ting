@@ -1,0 +1,47 @@
+{
+  "resource": [
+    {"name": "Free Keyword Tool", "href": "/"},
+    {"name": "Negative Keyword Tool", "href": "/"},
+    {"name": "Keyword Generator", "href": "/"},
+    {"name": "Best Keyword Research Tools", "href": "/"},
+    {"name": "Free Keyword Tool", "href": "/"},
+    {"name": "Keyword Grouping", "href": "/"},
+    {"name": "Keyword Niche Finder", "href": "/"}
+  ],
+  "searchMarketing": [
+    {"name": "Keyword Research", "href": "/"},
+    {"name": "PPC Keyword Research", "href": "/"},
+    {"name": "SEO Basics", "href": "/"},
+    {"name": "Display Ads", "href": "/"},
+    {"name": "AdWords Ads", "href": "/"},
+    {"name": "Top Blog Posts", "href": "/"}
+  ],
+  "marketing": [
+    {"name": "Google's War on Free Clicks", "href": "/"},
+    {"name": "How Much Does AdWords Cost?", "href": "/"},
+    {"name": "Most Popular Keywords by Industry", "href": "/"},
+    {"name": "Emotional Ads", "href": "/"},
+    {"name": "Conversion Rate", "href": "/"},
+    {"name": "Optimization", "href": "/"}
+  ],
+  "onlineMarketing": [
+    {"name": "Free Online Marketing Courses", "href": "/"},
+    {"name": "Google Ads Keyword Tool", "href": "/"},
+    {"name": "Google Ads Tools", "href": "/"},
+    {"name": "Google Keyword Tool", "href": "/"},
+    {"name": "Marketing Graders", "href": "/"},
+    {"name": "Smart Ads Creator", "href": "/"}
+  ],
+  "action": [
+    {"name": "Does Google Ads Work?", "href": "/"},
+    {"name": "Google Ads Certification Tips", "href": "/"},
+    {"name": "What Is Google Ads?", "href": "/"},
+    {"name": "What's a Good Click-Through Rate", "href": "/"}
+  ],
+  "research": [
+    {"name": "Google CTR", "href": "/"},
+    {"name": "Google Earnings by Industry", "href": "/"},
+    {"name": "Most Expensive Keywords", "href": "/"},
+    {"name": "The Economics of Quality Score", "href": "/"}
+  ]
+}

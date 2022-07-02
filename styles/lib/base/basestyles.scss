@@ -1,0 +1,246 @@
+@import './variables.scss';
+@import './mixins.scss';
+@import './responsive.scss';
+
+* {
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  overflow-x: hidden;
+  font-size: $base-font-size;
+}
+
+body {
+  @extend %margin-padd;
+  color: $base-font-color;
+  font-family: $base-font;
+  font-weight: $font-regular;
+  font-size: $base-font-size;
+  line-height: 16px;
+  background: $base-theme-color;
+}
+
+p,
+ul,
+li,
+ol,
+a,
+span {
+  @extend %margin-padd;
+  font-size: $base-font-size;
+  font-family: $base-font;
+  list-style: none;
+  text-decoration: none;
+  color: $base-font-color;
+  line-height: normal;
+}
+
+a,
+button {
+  span {
+    font-family: $base-font;
+  }
+
+  font-family: $base-font;
+}
+a{
+  cursor: pointer;
+}
+.bulider_loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h4,
+.h5,
+.h6,
+h4,
+h5,
+h6 {
+  @extend %margin-padd;
+  font-family: $base-font;
+  font-weight: 700;
+}
+
+i {
+  color: $base-font-color;
+  font-size: 24px;
+
+  @include respond-below(lg) {
+    font-size: 20px;
+  }
+}
+
+a,
+span,
+button,
+textarea,
+select {
+  &:focus {
+    appearance: none;
+    outline: none;
+  }
+}
+
+input {
+  &[readonly] {
+    cursor: not-allowed;
+  }
+}
+
+select {
+  border: 1px solid #ccc;
+  height: 32px;
+  padding: 5px 20px 4px 10px;
+  vertical-align: baseline;
+  font-weight: 400;
+  font-stretch: normal;
+  font-size: $base-font-size;
+  line-height: 1.35;
+  color: #000;
+  appearance: none;
+  background: #fff url("data:image/svg+xml;utf8,<svg viewBox='0 0 140 140' width='12' height='12' xmlns='http://www.w3.org/2000/svg'><g><path d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z' fill='black'/></g></svg>") no-repeat;
+  background-position: right 5px top 55%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='text'],
+input[type='email'] {
+  height: 36px;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.custom-checkbox {
+  label {
+    display: flex !important;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+
+    input {
+      border: 1px solid #ccc;
+      position: relative;
+      padding: 0;
+
+      &:before {
+        content: '';
+        display: block;
+        height: 16px;
+        width: 16px;
+        margin-right: 10px;
+        background: $color-white;
+        border: 1px solid #ccc;
+      }
+
+      &:checked:after {
+        content: '';
+        width: 2px;
+        height: 2px;
+        position: absolute;
+        top: 7px;
+        left: 2px;
+        transform: rotate(45deg);
+        box-shadow: 2px 0 0 black, 4px 0 0 black, 4px -2px 0 black, 4px -4px 0 black, 4px -6px 0 black, 4px -8px 0 black;
+      }
+
+      &:checked:before {
+        background: white;
+      }
+    }
+
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+button {
+  &:disabled {
+    cursor: no-drop;
+    opacity: 0.5;
+  }
+}
+
+.red {
+  color: #E9252E !important;
+}
+
+.green {
+  color: green;
+}
+
+.required {
+  color: red;
+  margin-left: 5px;
+}
+
+
+// table
+table {
+  th {
+    border-top: 1px solid #E5E5E5 !important;
+    border-bottom: 1px solid #E5E5E5 !important;
+    color: $color-black;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 32px;
+    white-space: pre;
+
+    @include respond-below(ms) {
+      display: none;
+    }
+  }
+
+  tr {
+    &:nth-child(even) {
+      background: #F8F8F8;
+    }
+  }
+
+  td {
+    border: none !important;
+    vertical-align: middle !important;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 32px;
+
+    @include respond-below(ms) {
+      display: block;
+      padding-top: 0 !important;
+
+      &:nth-child(1){
+        margin-top: 20px;
+      }
+
+      &:nth-last-child(1){
+        margin-bottom: 20px;
+      }
+
+      &[data-th]:before {
+        content: attr(data-th) ':';
+        font-weight: 700;
+        margin-right: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "./base/cdc.scss";
+@import "./base/variables.scss";
+@import "./base/mixins.scss";
+@import "./base/responsive.scss";
+@import "./base/basestyles.scss";
+@import "./base/typography.scss";
+
+//Components
+@import "./components/header";
+@import "./components/navbar";
+@import "./components/footer";
+
+//Pages
+@import "./pages/home";

@@ -1,0 +1,43 @@
+.header {
+  background: $bright-theme-color !important;
+
+  .navbar-nav {
+    padding-left: 15px;
+    a {
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 29px;
+      color: $color-black !important;
+      margin-right: 30px;
+    }
+
+    @include respond-above(sm){
+      align-items: center;
+    }
+  }
+
+  .navbar-collapse {
+    justify-content: end;
+  }
+
+  .navbar-toggler {
+    background: transparent;
+    border: 0;
+
+    &:focus {
+      color: transparent;
+    }
+
+    &-icon {
+      background: url("../../../public/icons/menu.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .hamburger-menu{
+    @include respond-below(sm){
+      display: none;
+    }
+  }
+}
