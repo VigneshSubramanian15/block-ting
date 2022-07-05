@@ -14,8 +14,8 @@ p {
   justify-content: center;
   overflow: hidden;
 
-  &:before{
-    content:"";
+  &:before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -87,6 +87,10 @@ p {
     font-size: 70px;
     line-height: 82px;
     color: $color-white;
+
+    @include respond-below(sm){
+      line-height: normal;
+    }
   }
 
   p {
@@ -371,11 +375,16 @@ p {
     box-shadow: -15px 15px 20px 1px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
 
+    .col-xl-6 {
+      @include respond-below(sm) {
+        padding: 0;
+      }
+    }
+
     &-body {
       label {
         width: 100%;
         margin-bottom: 20px;
-
 
         input, select {
           background: #FFF7FC;
@@ -405,6 +414,27 @@ p {
         }
       }
 
+      .desktop-img {
+        display: block;
+        @include respond-below(sm) {
+          display: none;
+        }
+      }
+
+      .mobile-img {
+        @include respond-above(sm) {
+          display: none;
+        }
+      }
+
+      .width-percent {
+        width: 75%;
+
+        @include respond-below(sm) {
+          width: 100%;
+        }
+      }
+
       span {
         float: right;
       }
@@ -416,6 +446,10 @@ p {
       font-size: 20px;
       line-height: 24px;
       color: #BFBFBF;
+
+      @include respond-below(sm) {
+        text-align: center;
+      }
     }
 
     &-footer {
@@ -509,6 +543,7 @@ p {
 
   .card-2, .card-3, .card-4, .card-5 {
     text-align: center;
+
     img {
       margin-bottom: 10px;
     }

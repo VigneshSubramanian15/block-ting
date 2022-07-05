@@ -4,7 +4,6 @@ import What from "../src/components/home/what";
 import Client from "../src/components/home/client";
 import Contact from "../src/components/home/contact";
 import Blogs from "../src/components/home/blogs";
-import Footer from "../src/components/footer";
 import Service from "../src/components/home/services";
 
 function Home() {
@@ -20,7 +19,6 @@ function Home() {
             <Client/>
             <Contact/>
             <Blogs/>
-            <Footer/>
         </>
     )
 }

@@ -13,7 +13,7 @@ function Contact() {
                                     <label htmlFor="name">
                                         <input id="name"
                                                className="form-control"
-                                        placeholder="Name"/>
+                                               placeholder="Name"/>
                                     </label>
                                 </div>
                                 <div className="col-xl-6">
@@ -33,27 +33,35 @@ function Contact() {
                                     </label>
                                 </div>
                                 <div className="col-xl-6">
-                                  <label className="w-75">
-                                      <select className="form-control">
-                                          <option>Country</option>
-                                      </select>
-                                  </label>
+                                    <label>
+                                        <select className="form-control width-percent">
+                                            <option>Country</option>
+                                        </select>
+                                    </label>
                                 </div>
                             </div>
-                            <Image src={"/assets/contact.png"} width={564} height={285} className="float-end"/>
+
+                            <div className="desktop-img">
+                                <Image src={"/assets/contact.png"}
+                                       width={564}
+                                       height={285}
+                                       className="float-end"
+                                       alt={"img"}/>
+                            </div>
+
                             <div className="row">
-                                <div className="col-xl-12 w-75 p-0">
+                                <div className="col-xl-12 p-0">
                                     <label htmlFor="name">
                                         <input id="name"
-                                               className="form-control"
+                                               className="form-control width-percent"
                                                placeholder="Contact Number"/>
                                     </label>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-xl-12 w-75 p-0">
+                                <div className="col-xl-12 p-0">
                                     <label>
-                                        <select className="form-control">
+                                        <select className="form-control width-percent">
                                             <option>Service Required</option>
                                         </select>
                                     </label>
@@ -61,6 +69,14 @@ function Contact() {
                             </div>
                         </form>
                         <p className="required">All Fields are Required</p>
+
+                        <div className="mobile-img">
+                            <Image src={"/assets/contact.png"}
+                                   width={564}
+                                   height={285}
+                                   className="float-end"
+                                   alt={"img"}/>
+                        </div>
                     </div>
 
                     <div className="card-footer p-3">

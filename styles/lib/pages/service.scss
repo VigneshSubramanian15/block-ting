@@ -1,0 +1,46 @@
+.service{
+
+  .card{
+    border-radius: 20px;
+
+    &-icon{
+      width: 80px;
+      height: 80px;
+      background: #ff817880;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    &-title{
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 25px;
+      color: #000000;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+
+    &-text{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      color: #000000;
+      margin-top: 20px;
+    }
+  }
+
+  &-content{
+
+    &__sub-title{
+      margin-bottom: 10px;
+    }
+
+    &__title{
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+  }
+}
