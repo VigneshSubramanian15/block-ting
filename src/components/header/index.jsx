@@ -8,12 +8,12 @@ function Header() {
     <Navbar bg="light" expand="lg" className="header">
       <div className="container">
         <Navbar.Brand href="/">
-          <Image src={Logo.src} height={50} width={200} />
+          <Image src={Logo.src} height={50} width={200} alt={"img"} />
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="ml-auto my-2 my-lg-0">
-            <DropdownButton title="Services" className="services-dropdown">
+            <DropdownButton title="Services" className="services-dropdown mx-4">
               <Dropdown.Item href="/marketing-strategy">
                 Marketting Strategy
               </Dropdown.Item>

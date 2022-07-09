@@ -1,17 +1,33 @@
 .header {
-  background: #fff0 !important;
+
   .services-dropdown {
     button {
-      background: transparent;
-      border: none;
+      background: transparent !important;
+      border: none !important;
       color: black;
       font-weight: 400;
       font-size: 25px;
       line-height: 29px;
+      outline: none;
+
+      &:active {
+        border: none !important;
+      }
+
+      &:focus {
+        border: none !important;
+        box-shadow: none !important;
+      }
+    }
+
+    a {
+      padding: 10px;
     }
   }
+
   .navbar-nav {
     padding-left: 15px;
+
     a {
       font-weight: 400;
       font-size: 25px;
