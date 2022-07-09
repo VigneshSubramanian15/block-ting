@@ -1,9 +1,38 @@
-.service{
+.service {
+  background: $color-white;
+  padding-bottom: 100px;
 
-  .card{
+  .hero-section {
+    &:before {
+      border-radius: 0;
+    }
+
+    h1 {
+      font-size: 55px;
+      line-height: normal;
+    }
+
+    p {
+      width: 80%;
+      line-height: 1.3;
+
+      @include respond-below(sm){
+        width: 100%;
+      }
+    }
+
+    button {
+      height: 60px;
+    }
+  }
+
+  .card {
     border-radius: 20px;
+    border: none;
+    box-shadow: -12px 14px 13px rgb(233 225 225 / 50%);
+    margin-top: 20px;
 
-    &-icon{
+    &-icon {
       width: 80px;
       height: 80px;
       background: #ff817880;
@@ -14,31 +43,32 @@
       margin-bottom: 20px;
     }
 
-    &-title{
+    &-title {
       font-weight: 700;
-      font-size: 21px;
+      font-size: 18px;
       line-height: 25px;
       color: #000000;
       margin-bottom: 10px;
       text-transform: capitalize;
     }
 
-    &-text{
+    &-text {
       font-weight: 400;
-      font-size: 20px;
+      font-size: 16px;
       line-height: 24px;
       color: #000000;
-      margin-top: 20px;
+      margin-top: 10px;
     }
   }
 
-  &-content{
+  &-content {
 
-    &__sub-title{
+    &__sub-title {
       margin-bottom: 10px;
+      color: $bright-theme-color;
     }
 
-    &__title{
+    &__title {
       font-size: 25px;
       margin-bottom: 30px;
     }

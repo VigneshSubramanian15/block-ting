@@ -35,11 +35,11 @@ function Features() {
         <div className="row">
             <div className="col-lg-12">
                 <p className="service-content__sub-title">Features</p>
-                <h1 className="service-content__title">Lorem Ipsum is simply dummy text <br/> of the printing and typesetting industry.</h1>
+                <h1 className="service-content__title">Lorem Ipsum is simply dummy text <br/> of the printing and typesetting industry?</h1>
 
                 <div className="row">
                     {serviceContent?.map(({id, title, description, icon})=><div className="col-xl-4 mb-4" key={id}>
-                        <div className="card shadow-lg h-100">
+                        <div className="card h-100">
                             <div className="card-body">
                                 <div className="card-icon shadow-sm">
                                     {icon}
