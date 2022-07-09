@@ -22,6 +22,14 @@
 
     a {
       padding: 10px;
+
+      &:hover{
+        background: $base-theme-color;
+      }
+
+      &:active{
+        background: $base-theme-color;
+      }
     }
   }
 

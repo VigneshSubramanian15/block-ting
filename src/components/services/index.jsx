@@ -5,10 +5,10 @@ function ServiceHero({ content }) {
     <div className="container h-90 service-wrapper">
       <div className="h-100">
         <div className="row h-100">
-          <div className="col-lg-4 hero-content order-2 order-lg-1">
+          <div className="col-lg-5 hero-content order-2 order-lg-1">
             <Image src={"/hero-img.png"} height={414} width={614} />
           </div>
-          <div className="col-lg-8 hero-content order-1 order-lg-2">
+          <div className="col-lg-7 hero-content order-1 order-lg-2">
             <h1>{content.title}</h1>
             <p>
               Content marketing includes things like educational articles,
