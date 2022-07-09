@@ -14,7 +14,7 @@ function Service() {
     <div className="service">
       <Header page={"brand"} />
       <div className="hero-section brand">
-        <ServiceHero content={content} />
+        <ServiceHero content={content} image="/assets/service/branding.svg" />
       </div>
       <Features />
     </div>

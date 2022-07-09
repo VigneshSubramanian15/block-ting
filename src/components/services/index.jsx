@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useEffect } from "react";
 
-function ServiceHero({ content }) {
+function ServiceHero({ content, image }) {
   const [scroll, setScroll] = useState(false);
   const [offset, setOffset] = useState(0);
 
@@ -24,7 +24,7 @@ function ServiceHero({ content }) {
       <div className="h-100">
         <div className="row h-100">
           <div className="col-lg-5 hero-content order-2 order-lg-1">
-            <Image src={"/hero-img.png"} height={414} width={614} />
+            <Image src={image} height={414} width={614} />
           </div>
           <div className="col-lg-7 hero-content order-1 order-lg-2">
             <h1 style={{ color: "black" }}>{content.title}</h1>
