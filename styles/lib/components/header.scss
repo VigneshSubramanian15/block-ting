@@ -1,6 +1,15 @@
 .header {
-  background: $bright-theme-color !important;
-
+  background: #fff0 !important;
+  .services-dropdown {
+    button {
+      background: transparent;
+      border: none;
+      color: black;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 29px;
+    }
+  }
   .navbar-nav {
     padding-left: 15px;
     a {
@@ -11,7 +20,7 @@
       margin-right: 30px;
     }
 
-    @include respond-above(sm){
+    @include respond-above(sm) {
       align-items: center;
     }
   }
@@ -35,8 +44,8 @@
     }
   }
 
-  .hamburger-menu{
-    @include respond-below(sm){
+  .hamburger-menu {
+    @include respond-below(sm) {
       display: none;
     }
   }
