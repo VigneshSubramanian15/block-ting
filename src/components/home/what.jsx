@@ -2,19 +2,43 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 function What() {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
     <section className="what-section">
       <div className="container">
         <div className="row">
           <h1 className="home-title">What we Do</h1>
-          <div className="col-lg-6">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            className="col-lg-6"
+          >
             <Image
               src={"/home/chart.png"}
               alt="chart"
               height={388}
               width={571}
             />
-          </div>
+          </motion.div>
           <div className="col-lg-6">
             <p>
               {`Disruptive marketing involves using experimental tactics that
@@ -24,15 +48,23 @@ function What() {
               And that's ok, that's how innovation works.`}
             </p>
 
-            <motion.div className="row">
+            <motion.div
+              className="container row"
+              variants={container}
+              initial="hidden"
+              whileInView="visible"
+            >
               <div className="col-lg-6">
-                <motion.div className="card card-one position-relative bg-img">
+                <motion.div
+                  variants={item}
+                  className="card card-one position-relative bg-img"
+                >
                   <strong>
                     20 <span>Projects Completed </span>
                   </strong>
                 </motion.div>
 
-                <motion.div className="card card-two">
+                <motion.div variants={item} className="card card-two">
                   <strong>
                     450% <span>Average ROI</span>
                   </strong>
@@ -40,12 +72,12 @@ function What() {
               </div>
 
               <div className="col-lg-6">
-                <motion.div className="card card-two">
+                <motion.div variants={item} className="card card-two">
                   <strong>
                     93% <span>Client Retension</span>
                   </strong>
                 </motion.div>
-                <motion.div className="card card-one last">
+                <motion.div variants={item} className="card card-one last">
                   <strong>
                     2000{" "}
                     <Image

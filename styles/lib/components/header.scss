@@ -1,5 +1,13 @@
+.brand {
+  background: #fbc4a6 !important;
+}
+.product-growth {
+  background: #b5caff !important;
+}
+.marketing-strategy {
+  background: #fbbdff !important;
+}
 .header {
-
   .services-dropdown {
     button {
       background: transparent !important;
@@ -19,15 +27,26 @@
         box-shadow: none !important;
       }
     }
+    .dropdown-menu.show {
+      transform: translateY(10px);
+      border-radius: 20px;
+      margin: 0;
+      padding: 0;
+    }
 
     a {
-      padding: 10px;
-
-      &:hover{
+      padding: 15px;
+      &:first-child {
+        border-radius: 20px;
+      }
+      &:last-child {
+        border-radius: 20px;
+      }
+      &:hover {
         background: $base-theme-color;
       }
 
-      &:active{
+      &:active {
         background: $base-theme-color;
       }
     }
