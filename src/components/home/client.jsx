@@ -111,16 +111,11 @@ function Client() {
     <div className="container client-section">
       <div className="row">
         <h1 className="home-title">What Our Clients Say</h1>
-        <div className="col-lg-6 mb-5">
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            className="card-one"
-          >
-            <motion.div variants={item} className="card-two">
-              <motion.div variants={item} className="card-three">
-                <motion.div variants={item} className="card">
+        <div className="col-lg-6 mb-5" key={"testimonialContainer"}>
+          <div className="card-one">
+            <div className="card-two">
+              <div className="card-three">
+                <div className="card">
                   <div className="media">
                     <div className="profile-user">
                       <Image
@@ -145,10 +140,10 @@ function Client() {
                       className="logo-bg"
                     />
                   </p>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="col-lg-6 d-flex align-items-center justify-content-center">
           <motion.div
@@ -158,20 +153,20 @@ function Client() {
             className="row client-grid"
           >
             {clientInfo?.map((img, i) => (
-              <motion.div
-                variants={item}
+              <div
                 onClick={() => setClientId(i)}
                 className="col-sm-4 client-border"
                 key={img}
               >
-                <Image
-                  className="p-3"
+                <motion.img
                   src={img.logoimage}
                   width={100}
-                  alt="quotes"
+                  alt={img.logoimage}
                   height={100}
+                  variants={item}
+                  key={img}
                 />
-              </motion.div>
+              </div>
             ))}
             <div className="dot">
               <button className="active" type="button">

@@ -45,24 +45,9 @@ function ServiceHero({ content, image, page }) {
             <nav className={` ${scroll ? "tabs-right" : "tabs"}`}>
               <div className="selector"></div>
               <a
-                href="/marketing-strategy"
-                style={{
-                  color:
-                    page === "marketing-strategy"
-                      ? pageColor.marketingStrategyPage
-                      : "black",
-                }}
-                className={` ${page === "marketing-strategy" ? "active" : " "}`}
-              >
-                Marketing Strategy
-              </a>
-              <a
                 className={` ${page === "product-growth" ? "active" : " "}`}
                 style={{
-                  color:
-                    page === "product-growth"
-                      ? pageColor.productGrowthPage
-                      : "black",
+                  color: page === "product-growth" ? "black" : "#cfcfcf",
                 }}
                 href="/product-growth"
               >
@@ -71,11 +56,20 @@ function ServiceHero({ content, image, page }) {
               <a
                 className={` ${page === "brand" ? "active" : " "}`}
                 style={{
-                  color: page === "brand" ? pageColor.brandPage : "black",
+                  color: page === "brand" ? "black" : "#cfcfcf",
                 }}
                 href="/brand-building"
               >
                 Brand Building
+              </a>
+              <a
+                href="/marketing-strategy"
+                style={{
+                  color: page === "marketing-strategy" ? "black" : "#cfcfcf",
+                }}
+                className={` ${page === "marketing-strategy" ? "active" : " "}`}
+              >
+                Marketing Strategy
               </a>
             </nav>
           </div>

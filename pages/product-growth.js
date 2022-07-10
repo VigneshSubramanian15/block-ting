@@ -3,6 +3,7 @@ import ServiceHero from "../src/components/services";
 import Features from "../src/components/services/features";
 import ImageSection from "../src/components/services/ImageSection";
 import { pageColor } from "../src/constant";
+import { motion } from "framer-motion";
 
 function Service() {
   const content = {
@@ -14,7 +15,13 @@ function Service() {
   };
   const color = pageColor.productGrowthPage;
   return (
-    <div className="service">
+    <motion.div
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0.7, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="service"
+    >
       <Header page={"product-growth"} />
       <div className="hero-section product-growth">
         <ServiceHero
@@ -25,7 +32,7 @@ function Service() {
       </div>
       <Features color={color} />
       <ImageSection color={color} />
-    </div>
+    </motion.div>
   );
 }
 

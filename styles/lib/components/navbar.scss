@@ -32,7 +32,6 @@
   .nav-link {
     margin-right: 30px;
     position: relative;
-    color: blue;
 
     @include respond-below(sm) {
       color: $color-white;
@@ -41,8 +40,6 @@
     }
 
     &.active {
-      color: blue;
-
       .fa {
         @include respond-below(sm) {
           display: none;
