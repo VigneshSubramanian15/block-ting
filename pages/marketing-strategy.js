@@ -2,6 +2,7 @@ import Header from "../src/components/header";
 import ServiceHero from "../src/components/services";
 import Features from "../src/components/services/features";
 import ImageSection from "../src/components/services/ImageSection";
+import { pageColor } from "../src/constant";
 
 function Service() {
   const content = {
@@ -11,6 +12,7 @@ function Service() {
             specific questions people have and provide them with
             something they can&apos;t get elsewhere.`,
   };
+  const color = pageColor.marketingStrategyPage;
   return (
     <div className="service">
       <Header page={"marketing-strategy"} />
@@ -21,8 +23,8 @@ function Service() {
           image={"/assets/service/marketing.svg"}
         />
       </div>
-      <Features />
-      <ImageSection />
+      <Features color={color} />
+      <ImageSection color={color} />
     </div>
   );
 }

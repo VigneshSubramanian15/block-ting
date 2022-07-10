@@ -1,7 +1,7 @@
 module.exports = {
   pageColor: {
     homePage: "",
-    brandPage: "",
+    brandPage: "#fbc4a6",
     productGrowthPage: "#b5caff",
     marketingStrategyPage: "#fbbdff",
   },

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const blogContent = [
   {
     id: 1,
@@ -43,15 +45,44 @@ const blogContent = [
   },
 ];
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 function Blogs() {
   return (
     <div className="container blog-section">
       <div className="row">
         <h1 className="home-title">Blogs</h1>
         <div className="col-xl-12">
-          <div className="card-wrapper">
-            {blogContent?.map(({ id, image, title, date, btnContent }) => (
-              <div key={id} className={`card card-${id}`}>
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            className="card-wrapper"
+          >
+            {blogContent?.map(({ id, image, title, date, btnContent }, i) => (
+              <motion.div
+                variants={item}
+                layoutId={i}
+                key={id}
+                className={`card card-${id}`}
+              >
                 <div className="card-body">
                   <div className="card-content">
                     <div className="img-radius">
@@ -66,9 +97,9 @@ function Blogs() {
                 <div className="card-footer">
                   <button type="button">{btnContent}</button>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

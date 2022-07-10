@@ -26,6 +26,10 @@ function Header({ page }) {
     setScrolled((winScroll / height) * 100);
     setScroll(offset > window.innerHeight / 4);
   }, [offset]);
+
+  const scrollToTop = () => {
+    window.scroll({ top: 0, left: 0, behavior: "smooth" });
+  };
   return (
     <>
       <Navbar expand="lg" className={`header ${page}`}>
@@ -59,7 +63,10 @@ function Header({ page }) {
           </Navbar.Collapse>
         </div>
       </Navbar>
-      <div className={`scroll-progress ${scroll ? "scroll-active" : ""}`}>
+      <div
+        onClick={scrollToTop}
+        className={`scroll-progress ${scroll ? "scroll-active" : ""}`}
+      >
         <span style={{ height: scrolled, backgroundColor: "" }}></span>
       </div>
     </>
