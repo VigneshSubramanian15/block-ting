@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const clientInfo = [
   {
@@ -87,15 +88,39 @@ const clientInfo = [
 
 function Client() {
   const [clientId, setClientId] = useState(0);
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.05,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { x: -10, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
     <div className="container client-section">
       <div className="row">
         <h1 className="home-title">What Our Clients Say</h1>
         <div className="col-lg-6 mb-5">
-          <div className="card-one">
-            <div className="card-two">
-              <div className="card-three">
-                <div className="card">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            className="card-one"
+          >
+            <motion.div variants={item} className="card-two">
+              <motion.div variants={item} className="card-three">
+                <motion.div variants={item} className="card">
                   <div className="media">
                     <div className="profile-user">
                       <Image
@@ -120,15 +145,21 @@ function Client() {
                       className="logo-bg"
                     />
                   </p>
-                </div>
-              </div>
-            </div>
-          </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
         <div className="col-lg-6 d-flex align-items-center justify-content-center">
-          <div className="row client-grid">
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="visible"
+            className="row client-grid"
+          >
             {clientInfo?.map((img, i) => (
-              <div
+              <motion.div
+                variants={item}
                 onClick={() => setClientId(i)}
                 className="col-sm-4 client-border"
                 key={img}
@@ -140,7 +171,7 @@ function Client() {
                   alt="quotes"
                   height={100}
                 />
-              </div>
+              </motion.div>
             ))}
             <div className="dot">
               <button className="active" type="button">
@@ -153,7 +184,7 @@ function Client() {
                 &#x2022;
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

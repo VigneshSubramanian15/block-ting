@@ -4,17 +4,23 @@
   .colored {
     color: $bright-theme-color;
   }
-  .scroll {
-    left: 40px !important;
-    bottom: 40px !important;
-    z-index: 200;
-    background: $bright-theme-color !important;
+
+  .tabs-right {
+    writing-mode: vertical-rl;
+    position: fixed;
+    right: 31px;
+    height: 70vh;
+    display: flex;
+    justify-content: space-around;
     a {
-      color: #fff !important;
+      font-weight: 700;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   .tabs {
-    transition: all 1s linear;
+    // transition: 1s linear;
     margin-top: 50px;
     font-size: 15px;
     height: 60px;
@@ -34,6 +40,7 @@
       color: #000;
       text-transform: uppercase;
       padding: 10px 20px;
+      margin: 0 5px;
       display: inline-block;
       position: relative;
       z-index: 1;
@@ -41,11 +48,19 @@
       i {
         margin-right: 5px;
       }
+      &:hover {
+        background: rgba(0, 0, 0, 0.43);
+        color: white !important;
+        border-radius: 15px;
+      }
     }
     .active {
       background: black;
       color: white !important;
       border-radius: 15px;
+      &:hover {
+        background: rgba(0, 0, 0);
+      }
     }
   }
 

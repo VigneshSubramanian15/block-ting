@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useEffect } from "react";
+import { pageColor } from "../../constant";
 
-function ServiceHero({ content, image }) {
+function ServiceHero({ content, image, page }) {
   const [scroll, setScroll] = useState(false);
   const [offset, setOffset] = useState(0);
 
@@ -15,8 +16,6 @@ function ServiceHero({ content, image }) {
   }, []);
 
   useEffect(() => {
-    let event = offset > window.innerHeight;
-    console.log({ offset, height: window.innerHeight, event });
     setScroll(offset > window.innerHeight / 4);
   }, [offset]);
   return (
@@ -43,18 +42,39 @@ function ServiceHero({ content, image }) {
                 Free Consultation
               </button>
             </div>
-            <nav className={`tabs ${scroll ? "scroll" : ""}`}>
+            <nav className={` ${scroll ? "tabs-right" : "tabs"}`}>
               <div className="selector"></div>
-              <a href="#" className="active">
-                {/* <i className="fab fa-superpowers"></i> */}
+              <a
+                href="/marketing-strategy"
+                style={{
+                  color:
+                    page === "marketing-strategy"
+                      ? pageColor.marketingStrategyPage
+                      : "black",
+                }}
+                className={` ${page === "marketing-strategy" ? "active" : " "}`}
+              >
                 Marketing Strategy
               </a>
-              <a href="#">
-                {/* <i className="fas fa-hand-rock"></i> */}
+              <a
+                className={` ${page === "product-growth" ? "active" : " "}`}
+                style={{
+                  color:
+                    page === "product-growth"
+                      ? pageColor.productGrowthPage
+                      : "black",
+                }}
+                href="/product-growth"
+              >
                 Product Growth
               </a>
-              <a href="#">
-                {/* <i className="fas fa-bolt"></i> */}
+              <a
+                className={` ${page === "brand" ? "active" : " "}`}
+                style={{
+                  color: page === "brand" ? pageColor.brandPage : "black",
+                }}
+                href="/brand-building"
+              >
                 Brand Building
               </a>
             </nav>

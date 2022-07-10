@@ -17,6 +17,7 @@ function Service() {
       <div className="hero-section marketing-strategy">
         <ServiceHero
           content={content}
+          page="marketing-strategy"
           image={"/assets/service/marketing.svg"}
         />
       </div>
