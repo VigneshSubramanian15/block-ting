@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { useEffect } from "react";
 import { pageColor } from "../../constant";
@@ -44,7 +45,7 @@ function ServiceHero({ content, image, page }) {
             </div>
             <nav className={` ${scroll ? "tabs-right" : "tabs"}`}>
               <div className="selector"></div>
-              <a
+              <Link
                 className={` ${page === "product-growth" ? "active" : " "}`}
                 style={{
                   color: page === "product-growth" ? "black" : "#cfcfcf",
@@ -52,8 +53,8 @@ function ServiceHero({ content, image, page }) {
                 href="/product-growth"
               >
                 Product Growth
-              </a>
-              <a
+              </Link>
+              <Link
                 className={` ${page === "brand" ? "active" : " "}`}
                 style={{
                   color: page === "brand" ? "black" : "#cfcfcf",
@@ -61,8 +62,8 @@ function ServiceHero({ content, image, page }) {
                 href="/brand-building"
               >
                 Brand Building
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/marketing-strategy"
                 style={{
                   color: page === "marketing-strategy" ? "black" : "#cfcfcf",
@@ -70,7 +71,7 @@ function ServiceHero({ content, image, page }) {
                 className={` ${page === "marketing-strategy" ? "active" : " "}`}
               >
                 Marketing Strategy
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
