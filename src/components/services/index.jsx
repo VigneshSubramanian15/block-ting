@@ -44,33 +44,37 @@ function ServiceHero({ content, image, page }) {
               </button>
             </div>
             <nav className={` ${scroll ? "tabs-right" : "tabs"}`}>
-              <div className="selector"></div>
-              <Link
-                className={` ${page === "product-growth" ? "active" : " "}`}
-                style={{
-                  color: page === "product-growth" ? "black" : "#cfcfcf",
-                }}
-                href="/product-growth"
-              >
-                Product Growth
+              <Link href="/product-growth">
+                <a
+                  className={`${page === "product-growth" ? "active" : " "}`}
+                  style={{
+                    color: page === "product-growth" ? "black" : "#cfcfcf",
+                  }}
+                >
+                  Product Growth
+                </a>
               </Link>
-              <Link
-                className={` ${page === "brand" ? "active" : " "}`}
-                style={{
-                  color: page === "brand" ? "black" : "#cfcfcf",
-                }}
-                href="/brand-building"
-              >
-                Brand Building
+              <Link href="/brand-building">
+                <a
+                  className={`${page === "brand" ? "active" : " "}`}
+                  style={{
+                    color: page === "brand" ? "black" : "#cfcfcf",
+                  }}
+                >
+                  Brand Building
+                </a>
               </Link>
-              <Link
-                href="/marketing-strategy"
-                style={{
-                  color: page === "marketing-strategy" ? "black" : "#cfcfcf",
-                }}
-                className={` ${page === "marketing-strategy" ? "active" : " "}`}
-              >
-                Marketing Strategy
+              <Link href="/marketing-strategy">
+                <a
+                  className={` ${
+                    page === "marketing-strategy" ? "active" : " "
+                  }`}
+                  style={{
+                    color: page === "marketing-strategy" ? "black" : "#cfcfcf",
+                  }}
+                >
+                  Marketing Strategy
+                </a>
               </Link>
             </nav>
           </div>

@@ -391,6 +391,10 @@ p {
 }
 
 .contact-section {
+  .loader-animation {
+    display: flex;
+    justify-content: center;
+  }
   .card {
     background: #ffffff;
     border: 3px solid #000000;
@@ -423,7 +427,9 @@ p {
           @include respond-below(sm) {
             font-size: 20px;
           }
-
+          .options {
+            padding: 10px;
+          }
           &::placeholder {
             font-weight: 400;
             font-size: 30px;
@@ -434,6 +440,12 @@ p {
               font-size: 20px;
             }
           }
+        }
+        .input-error {
+          font-size: 15px;
+          margin: 7px 0px 0 15px;
+          color: red;
+          display: block;
         }
       }
 

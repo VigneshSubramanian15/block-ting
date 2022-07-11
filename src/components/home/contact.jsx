@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Axios from "axios";
 import Swal from "sweetalert2";
+import Spinner from "react-bootstrap/Spinner";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -12,29 +13,46 @@ function Contact() {
     contactNumber: "",
     serviceRequired: "",
   });
+  const [showError, setShowError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onInputChange = ({ target: { value, id } }) => {
     setFormData((formData) => ({ ...formData, [id]: value }));
   };
 
-  const submitForm = () => {
-    Axios.post("/api/contact-us", formData)
-      .then((res) => {
-        Swal.fire({
-          title: "Success",
-          text: "You have successfully submited the form, we will contast you shortly",
-          icon: "success",
-          confirmButtonText: "Cool",
+  const submitForm = (e) => {
+    e.preventDefault();
+    if (
+      formData.name &&
+      formData.organizationName &&
+      formData.email &&
+      formData.country &&
+      formData.contactNumber &&
+      formData.serviceRequired
+    ) {
+      setLoading(true);
+      Axios.post("/api/contact-us", formData)
+        .then((res) => {
+          setLoading(false);
+          Swal.fire({
+            title: "Success",
+            text: "You have successfully submited the form, we will contast you shortly",
+            icon: "success",
+            confirmButtonText: "Done",
+          });
+        })
+        .catch((err) => {
+          setLoading(false);
+          Swal.fire({
+            title: "Error!",
+            text: "Error submitting the form, try again later",
+            icon: "error",
+            confirmButtonText: "Ok",
+          });
         });
-      })
-      .catch((err) => {
-        Swal.fire({
-          title: "Error!",
-          text: "Error submitting the form, try again later",
-          icon: "error",
-          confirmButtonText: "Ok",
-        });
-      });
+    } else {
+      setShowError(true);
+    }
   };
   return (
     <div className="container contact-section">
@@ -43,7 +61,7 @@ function Contact() {
         <div className="col-xl-12">
           <div className="card">
             <div className="card-body p-5">
-              <form>
+              <form onSubmit={submitForm}>
                 <div className="row">
                   <div className="col-xl-6">
                     <label htmlFor="name">
@@ -51,8 +69,14 @@ function Contact() {
                         id="name"
                         className="form-control"
                         placeholder="Name"
+                        required
                         onChange={onInputChange}
                       />
+                      {showError && !formData.name && (
+                        <small className="input-error">
+                          This field is required
+                        </small>
+                      )}
                     </label>
                   </div>
                   <div className="col-xl-6">
@@ -61,8 +85,14 @@ function Contact() {
                         id="organizationName"
                         placeholder="Organisation Name"
                         className="form-control"
+                        required
                         onChange={onInputChange}
                       />
+                      {showError && !formData.organizationName && (
+                        <small className="input-error">
+                          This field is required
+                        </small>
+                      )}
                     </label>
                   </div>
                 </div>
@@ -73,18 +103,30 @@ function Contact() {
                         id="email"
                         className="form-control"
                         placeholder="E-Mail"
+                        required
                         onChange={onInputChange}
                       />
+                      {showError && !formData.email && (
+                        <small className="input-error">
+                          This field is required
+                        </small>
+                      )}
                     </label>
                   </div>
                   <div className="col-xl-6">
-                    <label htmlFor="name">
+                    <label htmlFor="country">
                       <input
                         id="country"
                         className="form-control"
                         placeholder="Counry"
+                        required
                         onChange={onInputChange}
                       />
+                      {showError && !formData.country && (
+                        <small className="input-error">
+                          This field is required
+                        </small>
+                      )}
                     </label>
                   </div>
                 </div>
@@ -101,13 +143,19 @@ function Contact() {
 
                 <div className="row">
                   <div className="col-xl-12 p-0">
-                    <label htmlFor="name">
+                    <label htmlFor="contactNumber">
                       <input
                         id="contactNumber"
                         className="form-control width-percent"
-                        onChange={onInputChange}
                         placeholder="Contact Number"
+                        required
+                        onChange={onInputChange}
                       />
+                      {showError && !formData.contactNumber && (
+                        <small className="input-error">
+                          This field is required
+                        </small>
+                      )}
                     </label>
                   </div>
                 </div>
@@ -116,18 +164,29 @@ function Contact() {
                     <label>
                       <select
                         id="serviceRequired"
-                        onChange={onInputChange}
                         className="form-control width-percent"
+                        required
+                        onChange={onInputChange}
                       >
-                        <option value="" selected disabled>
+                        <option className="options" value="" selected disabled>
                           Select Services{" "}
                         </option>
-                        <option value={"BRAND BUILDING"}>BRAND BUILDING</option>
-                        <option value={"MARKETING STRATEGY"}>
-                          MARKETING STRATEGY
+                        <option className="options" value={"Brand Building"}>
+                          Brand Building
                         </option>
-                        <option value={"PRODUCT GROWTH"}>PRODUCT GROWTH</option>
+                        <option
+                          className="options"
+                          value={"Marketing Strategy"}
+                        >
+                          Marketing Strategy
+                        </option>
+                        <option value={"Product Growth"}>Product Growth</option>
                       </select>
+                      {showError && !formData.serviceRequired && (
+                        <small className="input-error">
+                          This field is required
+                        </small>
+                      )}
                     </label>
                   </div>
                 </div>
@@ -146,7 +205,13 @@ function Contact() {
             </div>
 
             <div onClick={submitForm} className="card-footer p-3">
-              <h6>Get Consultation</h6>
+              {!loading ? (
+                <h6>Get Consultation</h6>
+              ) : (
+                <div className="loader-animation">
+                  <Spinner animation="grow" variant="light" />
+                </div>
+              )}
             </div>
           </div>
         </div>
