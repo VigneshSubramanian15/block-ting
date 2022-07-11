@@ -57,7 +57,7 @@ function Header({ page }) {
               <Nav.Link href="/">Blog</Nav.Link>
               <Nav.Link href="/">Portfolio</Nav.Link>
               <Nav.Link href="/" className="hamburger-menu">
-                <Image src={HamburgerMenuIcon.src} height={30} width={30} />
+                {/* <Image src={HamburgerMenuIcon.src} height={30} width={30} /> */}
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

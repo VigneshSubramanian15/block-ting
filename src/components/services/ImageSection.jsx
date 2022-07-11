@@ -6,13 +6,13 @@ export default function ImageSection({ color }) {
     <section className="container py-5 image-section">
       <div className="row">
         <div className="col-md-7">
-          <h1 style={{ color: "black" }} className="colored">
+          <h1 style={{ color: "black", fontSize: "25px" }} className="colored">
             Lorem ipsum dolor sit{" "}
           </h1>
           {/* <p className="service-content__sub-title" style={{ marginTop: 0 }}>
             Features
           </p> */}
-          <h4 style={{ color: color }}>Highlight</h4>
+          <h1 style={{ color: color, fontSize: "20px" }}>Highlight</h1>
           <div className="row" style={{ paddingLeft: "25px" }}>
             <div className="col-md-6">
               <ul className="list">

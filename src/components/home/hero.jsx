@@ -74,7 +74,7 @@ function Hero() {
         </div>
         <div className="col-lg-6 hero-content">
           <Image
-            src={"/hero-img.png"}
+            src={"/assets/newBg.svg"}
             alt="hero-img"
             height={414}
             width={614}

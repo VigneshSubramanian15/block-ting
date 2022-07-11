@@ -29,7 +29,13 @@ function Home() {
   };
 
   return (
-    <motion.div variants={item} initial="hidden" animate="visible" exit="exit">
+    <motion.div
+      className="home-page"
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0.7, opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="hero-section">
         <Header />
         <Hero />

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Axios from "axios";
 import Swal from "sweetalert2";
 import Spinner from "react-bootstrap/Spinner";
+import Loader from "../Loader";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -191,7 +192,6 @@ function Contact() {
                   </div>
                 </div>
               </form>
-              <p className="required">All Fields are Required</p>
 
               <div className="mobile-img">
                 <Image
@@ -209,7 +209,7 @@ function Contact() {
                 <h6>Get Consultation</h6>
               ) : (
                 <div className="loader-animation">
-                  <Spinner animation="grow" variant="light" />
+                  <Loader />
                 </div>
               )}
             </div>

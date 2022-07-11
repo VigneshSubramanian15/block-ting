@@ -1,6 +1,31 @@
+@keyframes paddingAnimation {
+  0% {
+    padding: 0;
+  }
+  100% {
+    padding: 30px 30px 100px 30px;
+  }
+}
+
+@keyframes borderRadiusAnimation {
+  0% {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  100% {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
 .service {
   background: $color-white;
   padding: 30px 30px 100px 30px;
+  animation: 3s ease-out 0s 1 paddingAnimation;
   .colored {
     color: $bright-theme-color;
   }
@@ -39,7 +64,7 @@
       text-decoration: none;
       color: #000;
       text-transform: uppercase;
-      padding: 10px 20px;
+      padding: 12px 20px;
       margin: 5px;
       display: inline-block;
       position: relative;
@@ -91,6 +116,9 @@
   .hero-section {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    border-top-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    animation: 3s ease-out 0s 1 borderRadiusAnimation;
     height: 80vh;
 
     &:before {
