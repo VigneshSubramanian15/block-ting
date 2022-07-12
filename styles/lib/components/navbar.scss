@@ -4,6 +4,7 @@
   z-index: 3;
   width: 100%;
   background: #ff8177;
+  transition: all 3s ease-in-out;
 
   @include respond-below(sm) {
     backdrop-filter: blur(8px);

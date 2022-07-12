@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useState } from "react";
 import Axios from "axios";
 import Swal from "sweetalert2";
-import Spinner from "react-bootstrap/Spinner";
 import Loader from "../Loader";
 
 function Contact() {
@@ -35,6 +34,14 @@ function Contact() {
       Axios.post("/api/contact-us", formData)
         .then((res) => {
           setLoading(false);
+          setFormData({
+            name: "",
+            organizationName: "",
+            email: "",
+            country: "",
+            contactNumber: "",
+            serviceRequired: "",
+          });
           Swal.fire({
             title: "Success",
             text: "You have successfully submited the form, we will contast you shortly",
@@ -69,6 +76,7 @@ function Contact() {
                       <input
                         id="name"
                         className="form-control"
+                        value={formData.name}
                         placeholder="Name"
                         required
                         onChange={onInputChange}
@@ -86,6 +94,7 @@ function Contact() {
                         id="organizationName"
                         placeholder="Organisation Name"
                         className="form-control"
+                        value={formData.organizationName}
                         required
                         onChange={onInputChange}
                       />
@@ -103,6 +112,7 @@ function Contact() {
                       <input
                         id="email"
                         className="form-control"
+                        value={formData.email}
                         placeholder="E-Mail"
                         required
                         onChange={onInputChange}
@@ -120,6 +130,7 @@ function Contact() {
                         id="country"
                         className="form-control"
                         placeholder="Counry"
+                        value={formData.country}
                         required
                         onChange={onInputChange}
                       />
@@ -149,7 +160,9 @@ function Contact() {
                         id="contactNumber"
                         className="form-control width-percent"
                         placeholder="Contact Number"
+                        value={formData.contactNumber}
                         required
+                        type="number"
                         onChange={onInputChange}
                       />
                       {showError && !formData.contactNumber && (
@@ -166,6 +179,7 @@ function Contact() {
                       <select
                         id="serviceRequired"
                         className="form-control width-percent"
+                        value={formData.serviceRequired}
                         required
                         onChange={onInputChange}
                       >

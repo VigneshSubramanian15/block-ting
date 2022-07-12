@@ -1,10 +1,55 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Spinner } from "react-bootstrap";
+import Swal from "sweetalert2";
+import Axios from "axios";
 
 function Hero() {
   const [email, setemail] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showError, setShowError] = useState(false);
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    if (email) {
+      setLoading(true);
+      Axios.post("/api/free-consultation", { email })
+        .then((res) => {
+          setLoading(false);
+          Swal.fire({
+            title: "Success!",
+            text: "You have successfully submited the form, we will contast you shortly",
+            icon: "success",
+            confirmButtonText: "Done",
+          });
+        })
+        .catch((err) => {
+          console.log(err.response.status);
+          setLoading(false);
+          if (err.response.status === 401) {
+            Swal.fire({
+              title: "Success!",
+              text:
+                err.response.data ||
+                "Error submitting the form, try again later",
+              icon: "warning",
+              confirmButtonText: "Ok",
+            });
+          } else {
+            Swal.fire({
+              title: "Error!",
+              text:
+                err.response.data ||
+                "Error submitting the form, try again later",
+              icon: "error",
+              confirmButtonText: "Ok",
+            });
+          }
+        });
+    } else {
+      setShowError(true);
+    }
+  };
   return (
     <div className="container h-90">
       <div className="row h-100">
@@ -30,12 +75,7 @@ function Hero() {
               className="btn btn-outline-secondary hero-button"
               type="button"
               id="button-addon2"
-              onClick={() => {
-                setLoading(true);
-                setTimeout(() => {
-                  setLoading(false);
-                }, 1000);
-              }}
+              onClick={submitForm}
             >
               Free Consultation
               {loading && (

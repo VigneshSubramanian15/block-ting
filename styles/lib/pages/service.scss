@@ -144,13 +144,54 @@
     }
   }
 
+  .brand-building-ico {
+    background-color: #fff;
+    .card-icon {
+      background-color: #fbc4a6;
+    }
+    &:hover {
+      background-color: #fbc4a6;
+      .card-icon {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .product-growth-ico {
+    background-color: #fff;
+    .card-icon {
+      background-color: #b5caff;
+    }
+    &:hover {
+      background-color: #b5caff;
+      .card-icon {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .marketing-strategy-ico {
+    background-color: #fff;
+    .card-icon {
+      background-color: #fbbdff;
+    }
+    &:hover {
+      background-color: #fbbdff;
+      .card-icon {
+        background-color: #fff;
+      }
+    }
+  }
+
   .card {
     border-radius: 20px;
     border: none;
     box-shadow: -12px 14px 13px rgb(233 225 225 / 50%);
     margin-top: 20px;
+    transition: all 1s;
 
     &-icon {
+      transition: all 1s;
       width: 80px;
       height: 80px;
       background: #ff817880;

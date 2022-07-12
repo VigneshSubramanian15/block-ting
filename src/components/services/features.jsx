@@ -70,14 +70,17 @@ function Features({ color }) {
           <div className="row">
             {serviceContent?.map(({ id, title, description, icon }) => (
               <div className="col-xl-4 mb-4" key={id}>
-                <div className="card h-100">
+                <div
+                  className={`card h-100  ${
+                    color === "#fbbdff"
+                      ? "marketing-strategy-ico"
+                      : color === "#fbc4a6"
+                      ? "brand-building-ico"
+                      : "product-growth-ico"
+                  }`}
+                >
                   <div className="card-body">
-                    <div
-                      style={{ background: color }}
-                      className="card-icon shadow-sm"
-                    >
-                      {icon}
-                    </div>
+                    <div className="card-icon shadow-sm">{icon}</div>
                     <h3 className="card-title">{title}</h3>
                     <p className="card-text">{description}</p>
                   </div>
