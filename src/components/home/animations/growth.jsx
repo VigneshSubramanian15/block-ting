@@ -1,9 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { useEffect } from "react";
-import { useState } from "react";
+import { motion, useAnimation } from "framer-motion";
+
 export default function GrowthSVG() {
-  const [path, setPath] = useState({ x: 0, y: 0 });
   const svgVariants = {
     visible: {
       transition: {
@@ -12,27 +10,21 @@ export default function GrowthSVG() {
       },
     },
   };
-  useEffect(() => {
-    setTimeout(() => {
-      setPath({ x: 20, y: 0 });
-    }, 2000);
-  });
-  const pathVariants = {
-    hidden: {
-      x: "50px",
-      y: "50px",
-    },
-    visible: {
-      x: path.x,
-      y: path.y,
-      pathLength: 1,
+  const animation = useAnimation();
+
+  async function sequence() {
+    await animation.start({ x: "50px", y: "50px" });
+    await animation.start({ x: "0px", y: "0px" });
+    await animation.start({
+      rotate: 20,
       transition: {
         duration: 1,
         ease: "easeInOut",
-        delay: 1,
+        repeat: Infinity,
+        repeatType: "reverse",
       },
-    },
-  };
+    });
+  }
 
   return (
     <motion.svg
@@ -41,7 +33,7 @@ export default function GrowthSVG() {
       xmlns="http://www.w3.org/2000/svg"
       initial="hidden"
       //   animate="visible"
-      whileInView="visible"
+      whileInView={sequence}
     >
       <g id="Layer_2" data-name="Layer 2">
         <g id="Layer_1-2" data-name="Layer 1">
@@ -55,7 +47,7 @@ export default function GrowthSVG() {
           <path d="M42.2,84.17V95.71H30.68V84.17Z" />
           <path d="M54.51,95.62V84.12H66v11.5Z" />
           <path d="M78.51,84.08H90V95.66H78.51Z" />
-          <motion.g variants={pathVariants} id="Lens">
+          <motion.g animate={animation} whileInView={sequence} id="Lens">
             <path d="M300.54,325.66c-37.44,20.72-77.37,6-96.05-21.58a72,72,0,0,1,99.38-100.41C332,222.51,346.8,262.73,326,300.27l22.66,22.61c2,2,4.12,4,6.06,6.1,6.77,7.36,6.7,18-.1,25a17.64,17.64,0,0,1-25.21.31c-9.26-8.9-18.22-18.11-27.32-27.17C301.65,326.67,301.18,326.26,300.54,325.66Zm-36.36-122a59.92,59.92,0,0,0-60.11,60.2c0,32.77,27,59.52,60,59.56,32.78,0,59.82-27.05,59.75-59.84C323.75,230.59,297,203.66,264.18,203.69Zm46.35,115c8.94,8.93,17.79,17.84,26.73,26.66,2.88,2.84,6.51,2.83,8.93.29s2.24-5.86-.44-8.67c-3.34-3.52-6.84-6.89-10.27-10.32L319,310.11Z" />
             <path d="M311.84,263.54a47.9,47.9,0,1,1-47.46-47.87C290.42,215.77,311.89,237.44,311.84,263.54ZM264,299.49A35.93,35.93,0,1,0,228,263.59,36,36,0,0,0,264,299.49Z" />
             <path d="M263.73,251.39c-6.9,1-11,4.88-11.93,12H240.37c-1.22-10.79,9.47-24,23.36-23.57Z" />

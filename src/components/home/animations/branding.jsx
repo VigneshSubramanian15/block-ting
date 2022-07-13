@@ -8,6 +8,10 @@ export default function BrandingSVG() {
         staggerChildren: 0.5,
       },
     },
+    hover: {
+      scale: 1.2,
+      transition: { duration: 1 },
+    },
   };
   const pathVariants = {
     hidden: {
@@ -18,23 +22,10 @@ export default function BrandingSVG() {
       opacity: 1,
       pathLength: 1,
       transition: {
-        duration: 2.5,
-        ease: "easeInOut",
-        // repeat: Infinity,
-      },
-    },
-  };
-
-  const rotateVariants = {
-    hidden: {
-      rotate: 180,
-    },
-    visible: {
-      rotate: 0,
-      transition: {
-        duration: 2.5,
+        duration: 4,
         ease: "easeInOut",
         repeat: Infinity,
+        repeatType: "reverse",
       },
     },
   };
@@ -45,6 +36,9 @@ export default function BrandingSVG() {
       viewBox="0 0 383.34 380.64"
       xmlns="http://www.w3.org/2000/svg"
       initial="hidden"
+      // whileHover={{ rotate: 50 }}
+      // onHoverStart={(e) => {}}
+      // onHoverEnd={(e) => {}}
       //   animate="visible"
       whileInView="visible"
     >

@@ -55,13 +55,20 @@ function What() {
               whileInView="visible"
             >
               <div className="col-lg-6">
-                <motion.div
-                  variants={item}
-                  className="card card-one position-relative bg-img"
-                >
-                  <strong>
-                    20 <span>Projects Completed </span>
-                  </strong>
+                <motion.div variants={item} className="card card-one last ">
+                  <span>
+                    <span className="bold-number">20</span>
+                    <span>Projects </span>
+                  </span>
+                  <span>
+                    <span>Completed </span>
+                    <Image
+                      src={"/icons/hand.png"}
+                      alt="coffee"
+                      height={33}
+                      width={33}
+                    />
+                  </span>
                 </motion.div>
 
                 <motion.div variants={item} className="card card-two">

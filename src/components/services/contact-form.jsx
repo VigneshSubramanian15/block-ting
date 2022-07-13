@@ -49,7 +49,7 @@ export default function ContactForm({ show, setShow }) {
           });
           Swal.fire({
             title: "Success",
-            text: "You have successfully submited the form, we will contast you shortly",
+            text: "You have successfully submitted the form, we will contact you shortly",
             icon: "success",
             confirmButtonText: "Done",
           });
@@ -136,7 +136,7 @@ export default function ContactForm({ show, setShow }) {
                     <input
                       id="country"
                       className="form-control"
-                      placeholder="Counry"
+                      placeholder="Country"
                       value={formData.country}
                       required
                       onChange={onInputChange}

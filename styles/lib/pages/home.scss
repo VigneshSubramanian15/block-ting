@@ -1,24 +1,15 @@
-@keyframes paddingAnimation {
+@keyframes buttonAnimation {
   0% {
     padding: 0;
   }
   100% {
-    padding: 30px 30px 100px 30px;
+    padding: 0 20px;
   }
 }
 
-@keyframes borderRadiusAnimation {
-  0% {
-    border-radius: 0px;
-  }
-  100% {
-    border-radius: 20px;
-  }
-}
 .home-page {
   background: $color-white;
-  padding: 30px 30px 100px 30px;
-  animation: 3s ease-out 0s 1 paddingAnimation;
+  // padding: 30px 30px 100px 30px;
 }
 
 .card-footer.submit-btn.p-3 {
@@ -37,19 +28,20 @@ p {
 
 .hero-section {
   position: relative;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 20px;
-  animation: 3s ease-out 0s 1 borderRadiusAnimation;
+  // border-radius: 20px;
 
   .hero-button {
     display: flex;
     justify-content: center;
+    border-radius: 0 15px 15px 0;
     align-items: center;
     transition: 1s all ease;
+    animation: 3s ease-out 0s 1 buttonAnimation;
   }
   &:before {
     content: "";
@@ -60,7 +52,7 @@ p {
     width: 100%;
     background: #ff8177;
     //background: url("/assets/bg.png");
-    // border-radius: 0 0 50% 50%/0 0 100% 100%;
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
     transform: scaleX(2);
   }
 
@@ -214,6 +206,12 @@ p {
       line-height: 47px;
     }
 
+    .bold-number {
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 47px;
+      margin-right: 8px;
+    }
     span {
       font-weight: 400;
       font-size: 25px;

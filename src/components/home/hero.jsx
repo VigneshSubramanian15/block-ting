@@ -18,7 +18,7 @@ function Hero() {
           setLoading(false);
           Swal.fire({
             title: "Success!",
-            text: "You have successfully submited the form, we will contast you shortly",
+            text: "You have successfully submitted the form, we will contact you shortly",
             icon: "success",
             confirmButtonText: "Done",
           });
