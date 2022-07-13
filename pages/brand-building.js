@@ -5,6 +5,7 @@ import ImageSection from "../src/components/services/ImageSection";
 import { pageColor } from "../src/constant";
 import { motion } from "framer-motion";
 import Footer from "../src/components/footer";
+import Head from "next/head";
 
 function Service() {
   const content = {
@@ -17,6 +18,10 @@ function Service() {
   const color = pageColor.brandPage;
   return (
     <>
+      <Head>
+        <title>Blockting - Brand Building</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

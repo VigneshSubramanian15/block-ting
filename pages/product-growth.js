@@ -4,6 +4,7 @@ import Features from "../src/components/services/features";
 import ImageSection from "../src/components/services/ImageSection";
 import { pageColor } from "../src/constant";
 import { motion } from "framer-motion";
+import Head from "next/head";
 import Footer from "../src/components/footer";
 
 function Service() {
@@ -17,6 +18,10 @@ function Service() {
   const color = pageColor.productGrowthPage;
   return (
     <>
+      <Head>
+        <title>Blockting - Product Growth</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}

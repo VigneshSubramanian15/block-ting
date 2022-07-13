@@ -69,7 +69,12 @@ export default function ContactForm({ show, setShow }) {
   };
   // Form Data End
   return (
-    <Modal className="popup-contactform" show={show} onHide={handleClose}>
+    <Modal
+      size="lg"
+      className="popup-contactform"
+      show={show}
+      onHide={handleClose}
+    >
       <Modal.Body>
         <div className="  contact-section ">
           <div className="card-body p-5">
@@ -78,7 +83,7 @@ export default function ContactForm({ show, setShow }) {
             </h3>
             <form onSubmit={submitForm}>
               <div className="row">
-                <div className="col-xl-12">
+                <div className="col-md-12 col-xl-6">
                   <label htmlFor="name">
                     <input
                       id="name"
@@ -90,7 +95,7 @@ export default function ContactForm({ show, setShow }) {
                     />
                   </label>
                 </div>
-                <div className="col-xl-12">
+                <div className="col-md-12 col-xl-6">
                   <label htmlFor="firstname">
                     <input
                       id="organizationName"
@@ -109,7 +114,7 @@ export default function ContactForm({ show, setShow }) {
                 </div>
               </div>
               <div className="row">
-                <div className="col-xl-12">
+                <div className="col-md-12 col-xl-6">
                   <label htmlFor="name">
                     <input
                       id="email"
@@ -126,7 +131,7 @@ export default function ContactForm({ show, setShow }) {
                     )}
                   </label>
                 </div>
-                <div className="col-xl-12">
+                <div className="col-md-12 col-xl-6">
                   <label htmlFor="country">
                     <input
                       id="country"
@@ -145,25 +150,27 @@ export default function ContactForm({ show, setShow }) {
                 </div>
               </div>
 
-              <div className="col-xl-12 p-0">
-                <label htmlFor="contactNumber">
-                  <input
-                    id="contactNumber"
-                    className="form-control"
-                    placeholder="Contact Number"
-                    value={formData.contactNumber}
-                    required
-                    type="number"
-                    onChange={onInputChange}
-                  />
-                  {showError && !formData.contactNumber && (
-                    <small className="input-error">
-                      This field is required
-                    </small>
-                  )}
-                </label>
+              <div className="row">
+                <div className="col-md-12 col-xl-6">
+                  <label htmlFor="contactNumber">
+                    <input
+                      id="contactNumber"
+                      className="form-control"
+                      placeholder="Contact Number"
+                      value={formData.contactNumber}
+                      required
+                      type="number"
+                      onChange={onInputChange}
+                    />
+                    {showError && !formData.contactNumber && (
+                      <small className="input-error">
+                        This field is required
+                      </small>
+                    )}
+                  </label>
+                </div>
 
-                <div className="col-xl-12">
+                <div className="col-md-12 col-xl-6">
                   <label>
                     <select
                       id="serviceRequired"

@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import Footer from "../src/components/footer";
 import { useEffect } from "react";
 import Axios from "axios";
+import Head from "next/head";
 
 function Home() {
   useEffect(() => {
@@ -18,6 +19,10 @@ function Home() {
 
   return (
     <>
+      <Head>
+        <title>Blockting</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <motion.div
         className="home-page"
         initial={{ scale: 0.9, opacity: 0 }}
