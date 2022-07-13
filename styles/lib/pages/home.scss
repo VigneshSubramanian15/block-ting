@@ -350,6 +350,7 @@ p {
       grid-template-columns: 1fr 1fr 1fr;
       position: relative;
     }
+    cursor: pointer;
   }
 
   .client-border {
@@ -755,6 +756,7 @@ p {
       border-radius: 20px;
       padding: 20px;
       z-index: 1;
+      cursor: pointer;
 
       .img-bg {
         width: 100%;

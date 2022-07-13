@@ -77,7 +77,7 @@ function Service() {
               <div className="group-icon__wrapper">
                 <Image
                   className="group-icon"
-                  src={"/assets/service/group.png"}
+                  src={"/assets/HomePage/center-block.svg"}
                   height={320}
                   width={320}
                   alt={"service-img"}
