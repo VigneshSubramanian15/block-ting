@@ -21,6 +21,7 @@ const userStaticsSchema = new mongoose.Schema(
       device: Object,
       cpu: Object,
     },
+    ismobile: Boolean,
   },
   { timestamps: true }
 );

@@ -30,11 +30,18 @@
     color: $bright-theme-color;
   }
 
-  .tabs-right {
+  .tabs-hidden {
+    & > div {
+      a {
+        margin: 15px 5px;
+      }
+    }
+    transition: all 0.5s linear;
+    transform: translateY(-40px);
     writing-mode: vertical-rl;
     position: fixed;
-    right: 60px;
-    height: 70vh;
+    right: -20px;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     a {
@@ -44,8 +51,16 @@
       }
     }
   }
+  .tabs-show {
+    right: 60px;
+    transform: translateY(0);
+  }
+  .tabs-hide {
+    opacity: 0;
+  }
   .tabs {
-    // transition: 1s linear;
+    transition: all 1s linear;
+    opacity: 1;
     margin-top: 50px;
     font-size: 15px;
     height: 60px;
@@ -149,12 +164,6 @@
     .card-icon {
       background-color: #fbc4a6;
     }
-    &:hover {
-      background-color: #fbc4a6;
-      .card-icon {
-        background-color: #fff;
-      }
-    }
   }
 
   .product-growth-ico {
@@ -162,24 +171,12 @@
     .card-icon {
       background-color: #b5caff;
     }
-    &:hover {
-      background-color: #b5caff;
-      .card-icon {
-        background-color: #fff;
-      }
-    }
   }
 
   .marketing-strategy-ico {
     background-color: #fff;
     .card-icon {
       background-color: #fbbdff;
-    }
-    &:hover {
-      background-color: #fbbdff;
-      .card-icon {
-        background-color: #fff;
-      }
     }
   }
 
@@ -219,6 +216,7 @@
       margin-top: 10px;
     }
   }
+
   .image-section {
     .list {
       margin-top: 20px;
@@ -244,5 +242,43 @@
       font-size: 25px;
       margin-bottom: 30px;
     }
+  }
+
+  .feature-card {
+    .animated-card {
+      position: relative;
+
+      &:hover {
+        .overlay {
+          clip-path: circle(300px);
+        }
+        .card-icon {
+          background-color: #fff;
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        top: -20px;
+        clip-path: circle(40px at 54px 54px);
+        transition: all 1s cubic-bezier(0.25, 0.1, 0, 1.02);
+        z-index: 3;
+      }
+      .overlay.brand-building-ico {
+        background-color: #fbc4a6;
+      }
+      .overlay.product-growth-ico {
+        background-color: #b5caff;
+      }
+      .overlay.marketing-strategy-ico {
+        background-color: #fbbdff;
+      }
+    }
+  }
+}
+
+.popup-contactform {
+  .modal-content {
+    border-radius: 20px;
   }
 }

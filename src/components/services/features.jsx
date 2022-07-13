@@ -57,6 +57,13 @@ function Features({ color }) {
       ),
     },
   ];
+
+  const bg =
+    color === "#fbbdff"
+      ? "marketing-strategy-ico"
+      : color === "#fbc4a6"
+      ? "brand-building-ico"
+      : "product-growth-ico";
   return (
     <div className="container py-5 service-content">
       <div className="row">
@@ -69,22 +76,35 @@ function Features({ color }) {
 
           <div className="row">
             {serviceContent?.map(({ id, title, description, icon }) => (
-              <div className="col-xl-4 mb-4" key={id}>
-                <div
-                  className={`card h-100  ${
-                    color === "#fbbdff"
-                      ? "marketing-strategy-ico"
-                      : color === "#fbc4a6"
-                      ? "brand-building-ico"
-                      : "product-growth-ico"
-                  }`}
-                >
-                  <div className="card-body">
-                    <div className="card-icon shadow-sm">{icon}</div>
-                    <h3 className="card-title">{title}</h3>
-                    <p className="card-text">{description}</p>
+              <div className="col-xl-4 mb-4 feature-card" key={id}>
+                <div className="animated-card">
+                  <div className={`background card h-100  ${bg}`}>
+                    <div className="card-body">
+                      <div className="card-icon shadow-sm">{icon}</div>
+                      <h3 className="card-title">{title}</h3>
+                      <p className="card-text">{description}</p>
+                    </div>
+                  </div>
+                  <div className={`overlay card h-100  ${bg}`}>
+                    <div className="card-body">
+                      <div className="card-icon shadow-sm">{icon}</div>
+                      <h3 className="card-title">{title}</h3>
+                      <p className="card-text">{description}</p>
+                    </div>
                   </div>
                 </div>
+
+                {/* <div className="card">
+                  <div className="card-body">
+                    <div className="background-layer">
+                      <div className="card-icon shadow-sm">{icon}</div>
+                    </div>
+                    <div className="content">
+                      <h3 className="card-title">{title}</h3>
+                      <p className="card-text">{description}</p>
+                    </div>
+                  </div>
+                </div> */}
               </div>
             ))}
           </div>

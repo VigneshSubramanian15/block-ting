@@ -21,6 +21,12 @@
   animation: 3s ease-out 0s 1 paddingAnimation;
 }
 
+.card-footer.submit-btn.p-3 {
+  border-radius: 20px;
+  margin: 10px auto 0px auto;
+  max-width: 300px;
+}
+
 p {
   font-weight: 400;
   font-size: 20px;
@@ -629,7 +635,7 @@ p {
     &:last-child {
       .card-footer {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
 
         button {
           width: 50%;
@@ -779,7 +785,7 @@ p {
         }
 
         .img-bg {
-          background: #c6ffbd;
+          background: #fabdff;
         }
       }
 
@@ -800,7 +806,7 @@ p {
         }
 
         .img-bg {
-          background: #fabdff;
+          background: #c6ffbd;
         }
       }
 

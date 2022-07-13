@@ -6,17 +6,17 @@
     padding-bottom: 50px;
 
     &__left {
-      li{
+      li {
         margin-bottom: 5px;
       }
 
-      img{
+      img {
         float: left;
       }
 
-      .form{
+      .form {
         button {
-          background: #FFF0FA !important;
+          background: #fff0fa !important;
           border: 2px solid $color-black !important;
           border-radius: 15px !important;
           font-weight: 400 !important;
@@ -27,7 +27,6 @@
           padding: 15px 30px !important;
         }
       }
-
 
       h6 {
         font-weight: 500;
@@ -76,9 +75,9 @@
     margin-top: 20px;
     padding: 0 50px;
 
-    &-left{
-      p{
-        @include respond-below(sm){
+    &-left {
+      p {
+        @include respond-below(sm) {
           text-align: center;
         }
       }
@@ -87,9 +86,9 @@
     &-right {
       display: flex;
       align-items: center;
-      justify-content: end;
+      justify-content: flex-end;
 
-      @include respond-below(sm){
+      @include respond-below(sm) {
         justify-content: center;
         margin-bottom: 30px;
       }

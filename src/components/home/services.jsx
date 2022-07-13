@@ -8,7 +8,7 @@ function Service() {
       title: "BRAND BUILDING",
       description:
         "Building a Blockchain brand is not just about creating a community but evangelizing ",
-      image: "/assets/service/1.png",
+      image: "/assets/HomePage/Branding.svg",
       url: "/brand-building",
     },
     {
@@ -16,7 +16,7 @@ function Service() {
       title: "MARKETING STRATEGY",
       description:
         "Building a Blockchain brand is not just about creating a community but evangelizing ",
-      image: "/assets/service/2.png",
+      image: "/assets/HomePage/Marketing.svg",
       url: "/marketing-strategy",
     },
     {
@@ -24,7 +24,7 @@ function Service() {
       title: "PRODUCT GROWTH",
       description:
         "Building a Blockchain brand is not just about creating a community but evangelizing ",
-      image: "/assets/service/3.png",
+      image: "/assets/HomePage/Brand-1.svg",
       url: "/product-growth",
     },
     {
@@ -32,7 +32,7 @@ function Service() {
       title: "BRAND BUILDING",
       description:
         "Building a Blockchain brand is not just about creating a community but evangelizing ",
-      image: "/assets/service/4.png",
+      image: "/assets/HomePage/Growth.svg",
       url: "/brand-building",
     },
   ];
