@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import StackedCard from "./stacked-card";
 
 const clientInfo = [
   {
@@ -87,7 +87,8 @@ const clientInfo = [
 ];
 
 function Client() {
-  const [clientId, setClientId] = useState(0);
+  const [clientId, setClientId] = useState(clientInfo);
+
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -111,39 +112,11 @@ function Client() {
     <div className="container client-section">
       <div className="row">
         <h1 className="home-title">What Our Clients Say</h1>
-        <div className="col-lg-6 mb-5" key={"testimonialContainer"}>
-          <div className="card-one">
-            <div className="card-two">
-              <div className="card-three">
-                <div className="card">
-                  <div className="media">
-                    <div className="profile-user">
-                      <Image
-                        src={clientInfo[clientId].clientProfilePic}
-                        height={110}
-                        width={110}
-                        alt="Quote-Img"
-                      />
-                    </div>
-                    <div className="media-body">
-                      <h5>{clientInfo[clientId].clientName}</h5>
-                      <p>{clientInfo[clientId].clientDesignation}</p>
-                    </div>
-                  </div>
-                  <p>
-                    {clientInfo[clientId].clientTestimonial}
-                    <Image
-                      src={clientInfo[clientId].logoimage}
-                      height={136}
-                      width={136}
-                      alt="Quote-Img"
-                      className="logo-bg"
-                    />
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div
+          className="col-lg-6 mb-5"
+          style={{ transform: "translate(10px, 50px)" }}
+        >
+          <StackedCard clientInfo={clientId} />
         </div>
         <div className="col-lg-6 d-flex align-items-center justify-content-center">
           <motion.div
@@ -154,7 +127,9 @@ function Client() {
           >
             {clientInfo?.map((img, i) => (
               <div
-                onClick={() => setClientId(i)}
+                onClick={() =>
+                  setClientId((setClientId) => [...setClientId, clientInfo[i]])
+                }
                 className="col-sm-4 client-border"
                 key={img}
               >
