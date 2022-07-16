@@ -43,6 +43,7 @@ p {
     transition: 1s all ease;
     animation: 3s ease-out 0s 1 buttonAnimation;
   }
+
   &:before {
     content: "";
     position: absolute;
@@ -184,6 +185,7 @@ p {
       padding: 0 10px !important;
     }
   }
+
   .bg-img {
     background-image: url(/icons/hand.png);
     background-repeat: no-repeat;
@@ -212,6 +214,7 @@ p {
       line-height: 47px;
       margin-right: 8px;
     }
+
     span {
       font-weight: 400;
       font-size: 25px;
@@ -288,6 +291,12 @@ p {
     }
   }
 
+  .client-logo{
+    @include respond-below(sm){
+      margin-top: 100px;
+    }
+  }
+
   .card-one {
     background: #404040;
     border: 3px solid #a9adff;
@@ -324,6 +333,7 @@ p {
       filter: grayscale(1);
       opacity: 0.3;
     }
+
     @include respond-below(sm) {
       margin: 20px 0 0 0;
     }
@@ -356,9 +366,12 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+
     img {
       margin: 15px 5px;
+      object-fit: contain;
     }
+
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {
@@ -425,6 +438,7 @@ p {
     display: flex;
     justify-content: center;
   }
+
   .card {
     background: #ffffff;
     border: 3px solid #000000;
@@ -457,9 +471,11 @@ p {
           @include respond-below(sm) {
             font-size: 20px;
           }
+
           .options {
             padding: 10px;
           }
+
           &::placeholder {
             font-weight: 400;
             font-size: 30px;
@@ -471,6 +487,7 @@ p {
             }
           }
         }
+
         .input-error {
           font-size: 15px;
           margin: 7px 0px 0 15px;
@@ -523,9 +540,11 @@ p {
       border-radius: 0 0 22px 22px;
       cursor: pointer;
       transition: all 0.5s ease;
+
       &:hover {
         background: #1c1c1cd6;
       }
+
       h6 {
         font-weight: 700;
         font-size: 30px;
@@ -839,16 +858,30 @@ p {
   position: relative;
   border: none !important;
   box-shadow: none !important;
+
+  @include respond-below(sm) {
+    margin: 0 !important;
+    perspective: unset;
+  }
+
   .card--added {
     position: absolute;
     transition: all 0.5s ease;
     overflow: hidden;
+
+    @include respond-below(sm) {
+      &:last-child{
+        margin-top: -20px;
+      }
+      position: unset;
+    }
   }
 
   .card--added {
     transform: translateY(0px) scale(1);
     opacity: 1;
   }
+
   .card:nth-last-of-type(2) {
     transform: translate3d(0, -10px, -32px);
     opacity: 1;
@@ -902,6 +935,7 @@ p {
   .card:nth-last-of-type(n + 10) {
     display: none;
   }
+
   .card:nth-last-of-type(n + 2) {
     position: absolute;
     overflow: hidden;

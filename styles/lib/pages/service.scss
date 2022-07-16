@@ -9,14 +9,14 @@
 
 @keyframes borderRadiusAnimation {
   0% {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   }
   100% {
-    border-top-right-radius: 0px;
-    border-top-left-radius: 0px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -26,16 +26,29 @@
   background: $color-white;
   padding: 30px 30px 100px 30px;
   animation: 3s ease-out 0s 1 paddingAnimation;
+
   .colored {
     color: $bright-theme-color;
   }
 
+  .scroll-progress{
+    @include respond-below(sm){
+      right: 10px;
+    }
+  }
+
   .tabs-hidden {
+
+    @include respond-below(sm){
+      z-index: 99;
+    }
+
     & > div {
       a {
         margin: 15px 5px;
       }
     }
+
     transition: all 0.5s linear;
     transform: translateY(-40px);
     writing-mode: vertical-rl;
@@ -44,20 +57,29 @@
     height: 100vh;
     display: flex;
     justify-content: space-around;
+
     a {
       font-weight: 700;
+
       &:hover {
         text-decoration: underline;
       }
     }
   }
+
   .tabs-show {
     right: 60px;
     transform: translateY(0);
+
+    @include respond-below(sm){
+      right: 10px;
+    }
   }
+
   .tabs-hide {
     opacity: 0;
   }
+
   .tabs {
     transition: all 1s linear;
     opacity: 1;
@@ -67,7 +89,7 @@
     padding: 5px;
     list-style: none;
     background: #fff;
-    box-shadow: 0px 5px 20px rgb(0 0 0 / 10%);
+    box-shadow: 0 5px 20px rgb(0 0 0 / 10%);
     border-radius: 15px;
     position: fixed;
     display: flex;
@@ -75,6 +97,12 @@
     justify-content: space-around;
     bottom: calc(10%);
     left: calc(40%);
+
+    @include respond-below(sm){
+      left: 5px;
+      right: 5px;
+    }
+
     a {
       text-decoration: none;
       color: #000;
@@ -85,19 +113,23 @@
       position: relative;
       z-index: 1;
       transition-duration: 0.6s;
+
       i {
         margin-right: 5px;
       }
+
       &:hover {
         background: rgba(0, 0, 0, 0.43);
         color: white !important;
         border-radius: 15px;
       }
     }
+
     .active {
       background: black;
       color: white !important;
       border-radius: 15px;
+
       &:hover {
         background: rgba(0, 0, 0);
       }
@@ -128,6 +160,7 @@
       background: #b5caff !important;
     }
   }
+
   .hero-section {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -161,6 +194,7 @@
 
   .brand-building-ico {
     background-color: #fff;
+
     .card-icon {
       background-color: #fbc4a6;
     }
@@ -168,6 +202,7 @@
 
   .product-growth-ico {
     background-color: #fff;
+
     .card-icon {
       background-color: #b5caff;
     }
@@ -175,6 +210,7 @@
 
   .marketing-strategy-ico {
     background-color: #fff;
+
     .card-icon {
       background-color: #fbbdff;
     }
@@ -220,18 +256,21 @@
   .image-section {
     .list {
       margin-top: 20px;
+
       li {
         font-size: 20px;
         list-style: disc !important;
         padding: 5px;
       }
     }
+
     .align-right {
       display: flex;
       justify-content: center;
       align-items: center;
     }
   }
+
   &-content {
     &__sub-title {
       margin-bottom: 10px;
@@ -253,6 +292,7 @@
         .overlay {
           clip-path: circle(300px);
         }
+
         .card-icon {
           background-color: #fff;
         }
@@ -265,12 +305,15 @@
         transition: all 1s cubic-bezier(0.25, 0.1, 0, 1.02);
         z-index: 3;
       }
+
       .overlay.brand-building-ico {
         background-color: #fbc4a6;
       }
+
       .overlay.product-growth-ico {
         background-color: #b5caff;
       }
+
       .overlay.marketing-strategy-ico {
         background-color: #fbbdff;
       }
