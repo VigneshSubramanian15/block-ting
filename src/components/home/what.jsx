@@ -54,13 +54,13 @@ function What() {
               initial="hidden"
               whileInView="visible"
             >
-              <div className="col-lg-6">
+              <div className=" col-xl-6 col-6">
                 <motion.div variants={item} className="card card-one last ">
                   <span>
                     <span className="bold-number">20</span>
                     <span>Projects </span>
                   </span>
-                  <span>
+                  <span className="project-mobile">
                     <span>Completed </span>
                     <Image
                       src={"/icons/hand.png"}
@@ -78,14 +78,14 @@ function What() {
                 </motion.div>
               </div>
 
-              <div className="col-lg-6">
+              <div className=" col-xl-6 col-6">
                 <motion.div variants={item} className="card card-two">
                   <strong>
                     93% <span>Client Retension</span>
                   </strong>
                 </motion.div>
                 <motion.div variants={item} className="card card-one last">
-                  <strong>
+                  <strong className="coffee-mobile">
                     2000{" "}
                     <Image
                       src={"/icons/coffee.png"}

@@ -33,7 +33,6 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  // border-radius: 20px;
 
   .hero-button {
     display: flex;
@@ -51,10 +50,13 @@ p {
     left: 0;
     height: 100%;
     width: 100%;
-    background: #ff8177;
-    //background: url("/assets/bg.png");
+    background: #FF6464;
     border-radius: 0 0 50% 50%/0 0 100% 100%;
     transform: scaleX(2);
+
+    @include respond-below(sm) {
+      border-radius: 0 0 50% 50%/0 0 49% 50%;
+    }
   }
 
   @include respond-below(sm) {
@@ -99,14 +101,20 @@ p {
 
       @include respond-below(sm) {
         text-align: center;
-        font-size: 60px;
         margin-top: 150px;
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 41px;
       }
     }
 
     p {
       @include respond-below(sm) {
         text-align: center;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 12px;
+
       }
     }
   }
@@ -123,11 +131,11 @@ p {
   }
 
   p {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: $color-black;
     margin: 30px 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
   }
 
   input {
@@ -175,11 +183,17 @@ p {
 
 .what-section {
   .card {
-    background: #fff7fc;
+    background: #ffffff;
     border: 2px solid #000000;
     border-radius: 20px;
     padding: 10px 20px;
     margin-bottom: 20px;
+
+    @include respond-below(sm) {
+      border: 1.10956px solid #000000;
+      padding: 0;
+      border-radius: 11.0956px;
+    }
 
     img {
       padding: 0 10px !important;
@@ -206,6 +220,12 @@ p {
       font-weight: 800;
       font-size: 40px;
       line-height: 47px;
+
+      @include respond-below(sm) {
+        font-weight: 800;
+        font-size: 22.1912px;
+        line-height: 26px;
+      }
     }
 
     .bold-number {
@@ -213,12 +233,24 @@ p {
       font-size: 40px;
       line-height: 47px;
       margin-right: 8px;
+
+      @include respond-below(sm) {
+        font-weight: 800;
+        font-size: 22.1912px;
+        line-height: 26px;
+      }
     }
 
     span {
       font-weight: 400;
       font-size: 25px;
       line-height: 29px;
+
+      @include respond-below(sm) {
+        font-weight: 400;
+        font-size: 13.8695px;
+        line-height: 16px;
+      }
     }
 
     &.last {
@@ -226,6 +258,10 @@ p {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include respond-below(sm) {
+        height: 65px;
+      }
     }
   }
 
@@ -234,17 +270,70 @@ p {
       font-weight: 800;
       font-size: 25px;
       line-height: 29px;
+
+      @include respond-below(sm) {
+        font-weight: 800;
+        font-size: 13.8695px;
+        line-height: 16px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     span {
       font-weight: 400;
       font-size: 20px;
       line-height: 24px;
+
+      @include respond-below(sm) {
+        font-weight: 400;
+        font-size: 11.0956px;
+        line-height: 13px;
+      }
+    }
+  }
+
+  .project-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 22px;
+      object-fit: contain;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+  }
+
+  .coffee-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  p {
+    @include respond-below(sm) {
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 12px;
+      text-align: center;
     }
   }
 }
 
 .client-section {
+  @include respond-below(sm) {
+    margin-top: 30px !important;
+    margin-bottom: 100px !important;
+  }
+
+  .home-title {
+    margin-bottom: 90px;
+  }
+
   .media {
     display: flex;
     align-items: center;
@@ -291,8 +380,8 @@ p {
     }
   }
 
-  .client-logo{
-    @include respond-below(sm){
+  .client-logo {
+    @include respond-below(sm) {
       margin-top: 100px;
     }
   }
@@ -370,6 +459,12 @@ p {
     img {
       margin: 15px 5px;
       object-fit: contain;
+
+      @include respond-below(sm) {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+      }
     }
 
     &:nth-child(1),
@@ -439,6 +534,14 @@ p {
     justify-content: center;
   }
 
+  .mobile-img {
+    margin-bottom: -15px;
+
+    @include respond-above(sm) {
+      display: none;
+    }
+  }
+
   .card {
     background: #ffffff;
     border: 3px solid #000000;
@@ -469,7 +572,9 @@ p {
           padding-left: 15px;
 
           @include respond-below(sm) {
-            font-size: 20px;
+            font-weight: 400;
+            font-size: 13.9326px;
+            line-height: 16px;
           }
 
           .options {
@@ -483,7 +588,9 @@ p {
             color: #c0babe;
 
             @include respond-below(sm) {
-              font-size: 20px;
+              font-weight: 400;
+              font-size: 13.9326px;
+              line-height: 16px;
             }
           }
         }
@@ -551,6 +658,12 @@ p {
         line-height: 35px;
         text-align: center;
         color: #ffffff;
+
+        @include respond-below(sm) {
+          font-weight: 700;
+          font-size: 13.65px;
+          line-height: 16px;
+        }
       }
     }
   }
@@ -568,12 +681,10 @@ p {
 
     @include respond-below(sm) {
       grid-template-areas:
-        "a a a"
-        "b b b"
-        "c c c"
-        "d d d"
-        "e e e"
-        "f f f";
+        "a a a a"
+        "b b c c"
+        "d d e e"
+        "f f f f";
     }
   }
 
@@ -583,6 +694,13 @@ p {
 
     @include respond-below(sm) {
       margin: 0;
+      grid-row: 1;
+    }
+
+    img {
+      @include respond-below(sm) {
+        width: 85%;
+      }
     }
 
     .card-footer {
@@ -600,6 +718,7 @@ p {
 
     @include respond-below(sm) {
       margin: 0;
+      grid-row: 2;
     }
   }
 
@@ -609,19 +728,36 @@ p {
     text-align: center;
     @include respond-below(sm) {
       margin: 0;
+      grid-row: 2;
     }
   }
 
   .card-4 {
     grid-area: d;
+    @include respond-below(sm) {
+      grid-row: 4;
+    }
   }
 
   .card-5 {
     grid-area: e;
+    @include respond-below(sm) {
+      grid-row: 4;
+    }
   }
 
   .card-6 {
     grid-area: f;
+
+    @include respond-below(sm) {
+      grid-row: 3;
+    }
+
+    img {
+      @include respond-below(sm) {
+        width: 85%;
+      }
+    }
 
     .card-footer {
       position: absolute;
@@ -673,6 +809,12 @@ p {
       font-size: 21px;
       line-height: 25px;
       color: $color-black;
+
+      @include respond-below(sm) {
+        font-weight: 800;
+        font-size: 12.3681px;
+        line-height: 15px;
+      }
     }
 
     &-body {
@@ -693,6 +835,12 @@ p {
         p {
           padding: 0;
           margin: 10px 0 0 0;
+
+          @include respond-below(sm) {
+            font-weight: 400;
+            font-size: 11.7791px;
+            line-height: 14px;
+          }
         }
       }
     }
@@ -729,6 +877,12 @@ p {
         background: #000000;
         box-shadow: 0px -5px 15px 2px rgba(0, 0, 0, 0.25);
         padding: 15px 10px;
+
+        @include respond-below(sm) {
+          font-weight: 700;
+          font-size: 11.7791px;
+          line-height: 14px;
+        }
       }
     }
   }
@@ -738,6 +892,10 @@ p {
     width: 100%;
     object-fit: contain;
     border-radius: 25px;
+
+    @include respond-below(sm){
+      border-radius: 15px;
+    }
   }
 }
 
@@ -774,6 +932,13 @@ p {
       padding: 20px;
       z-index: 1;
       cursor: pointer;
+
+      &:nth-child(even) {
+        .row {
+          flex-direction: row-reverse;
+
+        }
+      }
 
       .img-bg {
         width: 100%;
@@ -834,6 +999,12 @@ p {
         font-size: 21px;
         line-height: 25px;
         color: $color-black;
+
+        @include respond-below(sm) {
+          font-weight: 700;
+          font-size: 12.8374px;
+          line-height: 15px;
+        }
       }
 
       p {
@@ -842,6 +1013,12 @@ p {
         line-height: 24px;
         color: $color-black;
         margin: 10px 0 0 0;
+
+        @include respond-below(sm) {
+          font-weight: 400;
+          font-size: 12.2261px;
+          line-height: 14px;
+        }
 
         @include respond-below(xg) {
           margin-bottom: 20px !important;
@@ -870,7 +1047,7 @@ p {
     overflow: hidden;
 
     @include respond-below(sm) {
-      &:last-child{
+      &:last-child {
         margin-top: -20px;
       }
       position: unset;
@@ -942,6 +1119,6 @@ p {
   }
 }
 
-html, body{
+html, body {
   overflow-x: hidden;
 }

@@ -4,9 +4,12 @@
   line-height: 70px;
   color: $color-black !important;
   text-align: center;
-  margin: 100px 0;
+  margin: 120px 0 70px 0;
 
   @include respond-below(sm){
-    margin-top: 200px;
+    margin: 50px 0 30px 0;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 41px;
   }
 }

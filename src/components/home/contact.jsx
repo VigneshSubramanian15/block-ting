@@ -67,6 +67,15 @@ function Contact() {
       <div className="row">
         <h1 className="home-title">Contact Us</h1>
         <div className="col-xl-12">
+          <div className="mobile-img">
+            <Image
+                src={"/assets/contact.png"}
+                width={564}
+                height={285}
+                className="float-end"
+                alt={"img"}
+            />
+          </div>
           <div className="card">
             <div className="card-body p-5">
               <form onSubmit={submitForm}>
@@ -206,16 +215,6 @@ function Contact() {
                   </div>
                 </div>
               </form>
-
-              <div className="mobile-img">
-                <Image
-                  src={"/assets/contact.png"}
-                  width={564}
-                  height={285}
-                  className="float-end"
-                  alt={"img"}
-                />
-              </div>
             </div>
 
             <div onClick={submitForm} className="card-footer p-3">

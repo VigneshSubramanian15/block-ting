@@ -109,12 +109,12 @@ function Client() {
         },
     };
     return (
-        <section className="client-section">
+        <section className="client-section" style={{marginBottom: "100px", marginTop: "150px"}}>
             <div className="container">
                 <div className="row">
-                    <h1 className="home-title">What Our Clients Say</h1>
+                    <h1 className="home-title" style={{marginTop: "50px"}}>What Our Clients Say</h1>
                     <div
-                        className="col-lg-6 mb-5"
+                        className="col-lg-6"
                         style={{transform: "translate(10px, 50px)"}}
                     >
                         <StackedCard clientInfo={clientId}/>

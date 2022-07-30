@@ -63,21 +63,15 @@ function Service() {
                       key={id}
                     >
                       <div className="row">
-                        <div className="col-xl-8">
+                        <div className="col-xl-8 col-8">
                           <div>
                             <h1>{title}</h1>
                             <p>{description}</p>
                           </div>
                         </div>
-                        <div className="col-xl-4 position-relative">
-                          <div className="img-bg">
+                        <div className="col-xl-4 col-4">
+                          <div className="img-bg position-relative">
                             {imageC}
-                            {/* <Image
-                            src={image}
-                            height={70}
-                            width={70}
-                            alt={`${title}-img`}
-                          /> */}
                           </div>
                         </div>
                       </div>

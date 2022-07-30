@@ -20,14 +20,15 @@
     button {
       background: transparent !important;
       border: none !important;
-      color: black;
-      font-weight: 400;
+      color: #ffffff;
       font-size: 25px;
       line-height: 29px;
       outline: none;
+      font-weight: 700;
+
 
       @include respond-below(sm) {
-        color: black !important;
+        color: #ffffff !important;
       }
 
       &:active {
@@ -69,11 +70,11 @@
     padding-left: 15px;
 
     a {
-      font-weight: 400;
       font-size: 25px;
       line-height: 29px;
-      color: $color-black !important;
+      color: #ffffff !important;
       margin-right: 30px;
+      font-weight: 700;
     }
 
     @include respond-above(sm) {
@@ -83,6 +84,11 @@
 
   .navbar-collapse {
     justify-content: flex-end;
+
+    @include respond-below(sm){
+      background: rgb(255 124 124);
+      border-radius: 15px;
+    }
   }
 
   .navbar-toggler {

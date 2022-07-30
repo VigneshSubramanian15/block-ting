@@ -3,14 +3,8 @@
   top: 0;
   z-index: 3;
   width: 100%;
-  background: #ff8177;
+  background: #FF6464;
   transition: all 3s ease-in-out;
-
-  @include respond-below(sm) {
-    backdrop-filter: blur(8px);
-    box-shadow: 0 20px 50px -10px rgb(0 0 0 / 61%);
-    background: $color-white;
-  }
 
   .container {
     @include respond-below(sm) {

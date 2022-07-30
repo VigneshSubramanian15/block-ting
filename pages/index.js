@@ -35,11 +35,13 @@ function Home() {
           <Hero />
         </div>
 
-        <What />
-        <Service />
-        <Client />
-        <Contact />
-        <Blogs />
+        <div className="wrapper-section">
+            <What />
+            <Service />
+            <Client />
+            <Contact />
+            <Blogs />
+        </div>
       </motion.div>
       <Footer />
     </>
