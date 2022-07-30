@@ -29,7 +29,7 @@ function FooterLinks() {
   return (
     <div className="container footer-links">
       <div className="row">
-        <div className="col-lg-6 footer-links__left">
+        <div className="col-lg-6 col-6 footer-links__left">
           <div className="row">
             <div className="col-xl-12">
               <form className="form">
@@ -38,7 +38,7 @@ function FooterLinks() {
             </div>
           </div>
           <div className="row">
-            <div className="col-xl-4">
+            <div className="col-xl-4  mb-5 mb-md-0">
               <h6>Company</h6>
               <ul>
                 {company?.map(({ name, href }) => (
@@ -75,7 +75,7 @@ function FooterLinks() {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 footer-links__right mb-5">
+        <div className="col-lg-6 col-6 footer-links__right mb-5">
           <div className="row">
             <div className="col-lg-4 mb-5">
               <h6>Free Keyword Tool & Resources</h6>
