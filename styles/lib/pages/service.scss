@@ -31,15 +31,14 @@
     color: $bright-theme-color;
   }
 
-  .scroll-progress{
-    @include respond-below(sm){
+  .scroll-progress {
+    @include respond-below(sm) {
       right: 10px;
     }
   }
 
   .tabs-hidden {
-
-    @include respond-below(sm){
+    @include respond-below(sm) {
       z-index: 99;
     }
 
@@ -71,7 +70,7 @@
     right: 60px;
     transform: translateY(0);
 
-    @include respond-below(sm){
+    @include respond-below(sm) {
       right: 10px;
     }
   }
@@ -98,7 +97,7 @@
     bottom: calc(10%);
     left: calc(40%);
 
-    @include respond-below(sm){
+    @include respond-below(sm) {
       left: 5px;
       right: 5px;
     }
@@ -151,13 +150,13 @@
 
   .marketing-strategy {
     &:before {
-      background: #fbbdff !important;
+      background: #fbbdff;
     }
   }
 
   .product-growth {
     &:before {
-      background: #b5caff !important;
+      background: #b5caff;
     }
   }
 
@@ -171,6 +170,8 @@
 
     &:before {
       border-radius: 0;
+      background: none;
+      box-shadow: none;
     }
 
     h1 {
@@ -212,7 +213,7 @@
     background-color: #fff;
 
     .card-icon {
-      background-color: #fbbdff;
+      background-color: #c6ffbd;
     }
   }
 
@@ -315,7 +316,7 @@
       }
 
       .overlay.marketing-strategy-ico {
-        background-color: #fbbdff;
+        background-color: #c6ffbd;
       }
     }
   }

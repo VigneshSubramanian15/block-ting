@@ -63,17 +63,17 @@ function Contact() {
     }
   };
   return (
-    <div className="container contact-section">
+    <div className="container contact-section mt-4">
       <div className="row">
         <h1 className="home-title">Contact Us</h1>
         <div className="col-xl-12">
           <div className="mobile-img">
             <Image
-                src={"/assets/contact.png"}
-                width={564}
-                height={285}
-                className="float-end"
-                alt={"img"}
+              src={"/assets/contact.png"}
+              width={564}
+              height={285}
+              className="float-end"
+              alt={"img"}
             />
           </div>
           <div className="card">

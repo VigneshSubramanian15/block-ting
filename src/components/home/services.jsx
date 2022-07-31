@@ -46,7 +46,7 @@ function Service() {
     },
   ];
   return (
-    <section className="service-section">
+    <section className="service-section mt-4">
       <div className="container">
         <div className="row">
           <h1 className="home-title">Our Services</h1>

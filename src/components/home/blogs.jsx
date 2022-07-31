@@ -66,7 +66,7 @@ const item = {
 };
 function Blogs() {
   return (
-    <div className="container blog-section">
+    <div className="container blog-section mt-5">
       <div className="row">
         <h1 className="home-title">Blogs</h1>
         <div className="col-xl-12">

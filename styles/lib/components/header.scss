@@ -7,12 +7,11 @@
 }
 
 .marketing-strategy {
-  background: #fbbdff !important;
+  background: #a0f892 !important;
 }
 
 .header {
   .services-dropdown {
-
     @include respond-below(sm) {
       margin: 0 !important;
     }
@@ -25,7 +24,6 @@
       line-height: 29px;
       outline: none;
       font-weight: 700;
-
 
       @include respond-below(sm) {
         color: #ffffff !important;
@@ -85,7 +83,7 @@
   .navbar-collapse {
     justify-content: flex-end;
 
-    @include respond-below(sm){
+    @include respond-below(sm) {
       background: rgb(255 124 124);
       border-radius: 15px;
     }

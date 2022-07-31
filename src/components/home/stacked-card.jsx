@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function StackedCard({ clientInfo }) {
-  console.log(clientInfo)
+  console.log(clientInfo);
   return (
     <div className="card stacked-cards">
       {clientInfo.map((iclientInfo, index) => (
@@ -12,9 +12,10 @@ export default function StackedCard({ clientInfo }) {
           animate={{
             opacity: 1,
             top: "-50px",
+            left: "50px",
           }}
           key={iclientInfo.key}
-          className={`card card--added stacked-card-${index+1}`}
+          className={`card card--added stacked-card-${index + 1}`}
         >
           <div className="media">
             <div className="profile-user">
@@ -33,11 +34,11 @@ export default function StackedCard({ clientInfo }) {
           <p className="position-relative">
             {iclientInfo.clientTestimonial}
             <Image
-                src={iclientInfo.logoimage}
-                height={136}
-                width={136}
-                alt="Quote-Img"
-                className="logo-bg"
+              src={iclientInfo.logoimage}
+              height={136}
+              width={136}
+              alt="Quote-Img"
+              className="logo-bg"
             />
           </p>
         </motion.div>

@@ -22,7 +22,7 @@ function What() {
     },
   };
   return (
-    <section className="what-section">
+    <section className="what-section mt-4">
       <div className="container">
         <div className="row">
           <h1 className="home-title">What we Do</h1>
