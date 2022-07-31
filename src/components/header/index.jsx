@@ -1,7 +1,7 @@
 import { Navbar, Nav, DropdownButton, Dropdown } from "react-bootstrap";
 import Image from "next/image";
 import Logo from "../../../public/logo.png";
-import HamburgerMenuIcon from "../../../public/icons/menu.png";
+import HamburgerMenuIcon from "../../../public/icons/Menu.png";
 import { useState, useEffect } from "react";
 
 function Header({ page }) {
