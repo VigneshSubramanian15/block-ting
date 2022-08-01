@@ -129,6 +129,9 @@
     border-radius: 20px;
     background: black;
   }
+  @include respond-below(sm) {
+    display: none;
+  }
 }
 
 .scroll-active {

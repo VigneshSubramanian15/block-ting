@@ -1112,14 +1112,14 @@ p {
   //   opacity: -0.35;
   // }
 
-  // .card:nth-last-of-type(n + 10) {
-  //   display: none;
-  // }
+  .card:nth-last-of-type(n + 10) {
+    display: none;
+  }
 
-  // .card:nth-last-of-type(n + 2) {
-  //   position: absolute;
-  //   overflow: hidden;
-  // }
+  .card:nth-last-of-type(n + 2) {
+    position: absolute;
+    overflow: hidden;
+  }
 }
 
 html,
