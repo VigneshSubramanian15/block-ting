@@ -14,7 +14,8 @@
   }
 }
 
-.section-our-solutions {
+.section-our-solutions,
+.section-lets-talk {
   background: white;
 
   .header {
@@ -43,5 +44,65 @@
 
   .navbar {
     background: white;
+  }
+}
+
+.section-our-solutions{
+  .badge-wrapper{
+    justify-content: center;
+  }
+}
+
+.section-lets-talk{
+
+  .cms-title-one{
+    @include respond-below(sm){
+      padding-left: 20px;
+      padding-right: 100px;
+    }
+  }
+
+
+  .cms-title-two{
+    @include respond-below(sm){
+     margin: 40px 0 0 0 !important;
+    }
+  }
+
+  .badge-wrapper{
+    @include respond-below(sm){
+      justify-content: flex-start;
+      padding: 0 20px;
+      margin: 20px 0;
+    }
+
+    .badge{
+      margin-bottom: 15px;
+      margin-left: 0;
+
+      @include respond-below(sm){
+        margin-right: 10px;
+
+      }
+    }
+  }
+
+  .badge-two{
+    .badge-wrapper{
+      margin: 30px 0 ;
+      justify-content: center;
+
+      @include respond-below(sm){
+        justify-content: flex-start;
+        padding: 0 20px;
+      }
+
+      .badge{
+        @include respond-below(sm){
+          margin-right: 10px;
+        }
+      }
+    }
+
   }
 }

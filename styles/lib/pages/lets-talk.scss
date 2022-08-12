@@ -1,0 +1,178 @@
+.section-lets-talk {
+  .cms-title {
+    margin: 150px 0 20px 0;
+  }
+
+  .list {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+
+    @include respond-below(sm){
+      font-weight: 400;
+      font-size: 9.44314px;
+      line-height: 11px;
+      margin-left: 30px;
+      left: 0;
+    }
+
+    .bullet-icon {
+      position: absolute;
+      left: -50px;
+
+      @include respond-below(sm){
+        margin-left: 0;
+        left: -30px;
+      }
+
+      img{
+        @include respond-below(sm){
+          height: 15px;
+        }
+      }
+    }
+  }
+
+  .cta-btn {
+    background: #000000;
+    text-align: center;
+    color: white;
+    padding: 15px 100px;
+    border: 0;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 25px;
+    border-radius: 15px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0 0 50px;
+
+    @include respond-below(sm) {
+      font-weight: 800;
+      font-size: 11px;
+      line-height: 13px;
+      border-radius: 7px;
+      height: 24px;
+      padding: 15px 30px;
+    }
+  }
+
+  .lets-talk-card {
+    margin-bottom: 200px;
+
+    .card {
+      border: 3px solid #000000;
+      border-radius: 20px;
+
+      &-body{
+        @include respond-below(sm){
+          padding: 5px;
+        }
+      }
+
+      img {
+        height: 184px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 20px;
+      }
+
+      p {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #000;
+        color: #fff;
+        padding: 15px 30px;
+        margin: 0;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+        @include respond-below(sm) {
+          font-size: 11.0011px;
+          line-height: 13px;
+        }
+      }
+
+      &-title {
+        font-style: normal;
+        font-weight: 700;
+        margin: 20px 0 30px 0;
+        font-size: 25px;
+        line-height: 30px;
+
+        @include respond-below(sm) {
+          font-weight: 700;
+          font-size: 11.8952px;
+          line-height: 14px;
+          text-align: left;
+          margin-bottom: 15px;
+        }
+      }
+
+      &-subtitle {
+        margin-bottom: 30px;
+        color: #000000;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+
+        @include respond-below(sm) {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 9.51613px;
+          line-height: 12px;
+        }
+      }
+
+      &-footer {
+        padding: 0;
+        border: 0;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $color-white;
+        position: relative;
+
+        button {
+          background: #000000;
+          border-radius: 0;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 15px;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          text-align: center;
+          color: white;
+          padding: 15px;
+          border: 0;
+          margin: 0;
+          width: 50%;
+
+          @include respond-below(sm) {
+            font-weight: 700;
+            font-size: 11.8952px;
+            line-height: 14px;
+
+          }
+        }
+
+        img {
+          width: 35px;
+          height: 35px;
+          object-fit: contain;
+          position: absolute;
+          top: -20px;
+          right: 20px;
+        }
+      }
+    }
+  }
+}

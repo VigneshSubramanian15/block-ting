@@ -2,7 +2,7 @@ function GetStarted() {
     return <div className="section-get-started">
         <div className="container">
             <div className="row">
-                <div className="col-xl-12">
+                <div className="col-xl-12 p-5 p-md-0">
                     <h1>
                         Ready To Get Started? <br/>
                         We Are Here To Help You!

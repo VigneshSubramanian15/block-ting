@@ -1,6 +1,6 @@
 import Badge from "../badge";
 
-function BadgeSolutions() {
+function BadgeTwoTalk() {
     const badgeData = [
         {
             id: 1,
@@ -17,11 +17,15 @@ function BadgeSolutions() {
         {
             id: 4,
             name: "New Product"
-        }
+        },
+        {
+            id: 5,
+            name: "Product Growth"
+        },
     ]
-    return <>
+    return <div className="badge-two">
       <Badge badge={badgeData}/>
-    </>
+    </div>
 }
 
-export default BadgeSolutions;
+export default BadgeTwoTalk;
