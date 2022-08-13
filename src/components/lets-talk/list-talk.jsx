@@ -15,20 +15,25 @@ function ListTalk() {
                 " ad placement methods."
         }
     ]
-    return <>
-        <ul>
-            {list?.map(({id, description}) => <li className="position-relative list" key={id}>
-                {description}
-                <div className="bullet-icon">
-                    <img src={"/icons/bullet.png"} alt="bullet-icon"/>
-                </div>
-            </li>)}
-        </ul>
+    return <div className="row position-relative">
+       <div className="col-xl-8">
+           <ul>
+               {list?.map(({id, description}) => <li className="position-relative list" key={id}>
+                   {description}
+                   <div className="bullet-icon">
+                       <img src={"/icons/bullet.png"} alt="bullet-icon"/>
+                   </div>
+               </li>)}
+           </ul>
 
-        <button type="button" className="cta-btn">
-            CTA
-        </button>
-    </>
+           <button type="button" className="cta-btn">
+               CTA
+           </button>
+       </div>
+       <div className="col-xl-4">
+          <img className="lets-banner" src="/lets-talk/let-talk-img.png" alt="banner"/>
+       </div>
+    </div>
 }
 
 export default ListTalk;
