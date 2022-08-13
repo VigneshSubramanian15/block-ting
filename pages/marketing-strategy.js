@@ -6,6 +6,11 @@ import { pageColor } from "../src/constant";
 import { motion } from "framer-motion";
 import Footer from "../src/components/footer";
 import Head from "next/head";
+import GetStarted from "../src/components/get-started";
+import ProcessService from "../src/components/services/process-service";
+import WhyService from "../src/components/services/why-service";
+import CardService from "../src/components/services/card-service";
+import CarouselService from "../src/components/services/carousel-service";
 
 function Service() {
   const content = {
@@ -38,9 +43,13 @@ function Service() {
           />
         </div>
         <Features color={color} />
-        <ImageSection color={color} />
+          <ProcessService/>
+          <WhyService/>
+          <CardService/>
       </motion.div>
-      <Footer />
+        <CarouselService/>
+        <GetStarted/>
+        <Footer />
     </>
   );
 }

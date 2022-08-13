@@ -1,12 +1,10 @@
-import { pageColor } from "../../constant";
-
 function Features({ color }) {
   const serviceContent = [
     {
       id: 1,
-      title: "Lorem Ipsum is simply dummy text ",
+      title: "Lorem Ipsum Is Simply Dummy",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "It is a long established fact that a reader will be distracted by the",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +22,9 @@ function Features({ color }) {
     },
     {
       id: 2,
-      title: "established fact that a",
+      title: "Lorem Ipsum Is Simply Dummy",
       description:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "It is a long established fact that a reader will be distracted by the",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,9 +39,9 @@ function Features({ color }) {
     },
     {
       id: 3,
-      title: "Contrary to popular belief",
+      title: "Lorem Ipsum Is Simply Dummy",
       description:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature",
+          "It is a long established fact that a reader will be distracted by the",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -65,46 +63,45 @@ function Features({ color }) {
       ? "brand-building-ico"
       : "product-growth-ico";
   return (
-    <div className="container py-5 service-content">
+    <div className="container-fluid py-5 service-content">
       <div className="row">
         <div className="col-lg-12">
           {/* <p className="service-content__sub-title">Features</p> */}
           <h1 className="service-content__title">
-            Lorem Ipsum is simply dummy text <br /> of the printing and
-            typesetting industry?
+            Key Features
           </h1>
 
-          <div className="row">
+          <div className="row justify-content-center">
             {serviceContent?.map(({ id, title, description, icon }) => (
-              <div className="col-xl-4 mb-4 feature-card" key={id}>
-                <div className="animated-card">
+              <div className="col-6 col-xl-4 mb-4 feature-card" key={id}>
+                <div className="animated-card features-width">
                   <div className={`background card h-100  ${bg}`}>
                     <div className="card-body">
-                      <div className="card-icon shadow-sm">{icon}</div>
-                      <h3 className="card-title">{title}</h3>
+                     <div className="row align-items-center">
+                       <div className="col-2">
+                         <div className="card-icon shadow-sm">{icon}</div>
+                       </div>
+                       <div className="col-10">
+                         <h3 className="card-title">{title}</h3>
+                       </div>
+                     </div>
                       <p className="card-text">{description}</p>
                     </div>
                   </div>
                   <div className={`overlay card h-100  ${bg}`}>
                     <div className="card-body">
-                      <div className="card-icon shadow-sm">{icon}</div>
-                      <h3 className="card-title">{title}</h3>
+                      <div className="row align-items-center">
+                        <div className="col-2">
+                          <div className="card-icon shadow-sm">{icon}</div>
+                        </div>
+                        <div className="col-10">
+                          <h3 className="card-title">{title}</h3>
+                        </div>
+                      </div>
                       <p className="card-text">{description}</p>
                     </div>
                   </div>
                 </div>
-
-                {/* <div className="card">
-                  <div className="card-body">
-                    <div className="background-layer">
-                      <div className="card-icon shadow-sm">{icon}</div>
-                    </div>
-                    <div className="content">
-                      <h3 className="card-title">{title}</h3>
-                      <p className="card-text">{description}</p>
-                    </div>
-                  </div>
-                </div> */}
               </div>
             ))}
           </div>

@@ -24,11 +24,31 @@ function ServiceHero({ content, image, page }) {
   }, [offset]);
   return (
     <>
-      <div className="container h-90 service-wrapper">
+      <div className="container h-90 service-wrapper position-relative">
         <div className="h-100">
           <div className="row h-100">
             <div className="col-lg-5 hero-content order-2 order-lg-1">
               <Image src={image} height={414} width={614} />
+              <div className="social-icons mt-5">
+                <Image
+                    src={"/icons/twitter.png"}
+                    alt="twitter"
+                    height={29}
+                    width={29}
+                />
+                <Image
+                    src={"/icons/telegram.png"}
+                    alt="telegram"
+                    height={29}
+                    width={29}
+                />
+                <Image
+                    src={"/icons/instagram.png"}
+                    alt="instagram"
+                    height={29}
+                    width={29}
+                />
+              </div>
             </div>
             <div className="col-lg-7 hero-content order-1 order-lg-2">
               <h1 style={{ color: "black" }}>{content.title}</h1>
