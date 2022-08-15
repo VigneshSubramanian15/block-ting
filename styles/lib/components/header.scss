@@ -53,6 +53,7 @@
     a {
       padding: 15px;
       border-radius: 20px;
+      color: #000000 !important;
 
       &:hover {
         background: $base-theme-color;
@@ -70,7 +71,6 @@
     a {
       font-size: 25px;
       line-height: 29px;
-      color: #ffffff !important;
       margin-right: 30px;
       font-weight: 700;
     }
