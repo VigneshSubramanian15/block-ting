@@ -267,7 +267,6 @@
         font-size: 8.90989px;
         line-height: 10px;
       }
-
     }
 
     &-text {
@@ -413,23 +412,21 @@
   }
 
   .why-section {
-
-
     &__wrapper {
       width: 80%;
 
       svg {
         margin-bottom: 10px;
+        width: 50px;
+        height: 50px;
       }
-
     }
-
 
     h2 {
       font-weight: 700;
       font-size: 25px;
       line-height: 29px;
-      margin-bottom: 10px;
+      margin: 15px 0;
 
       @include respond-below(sm) {
         font-weight: 700;
@@ -437,7 +434,6 @@
         line-height: 15px;
       }
     }
-
 
     h6 {
       font-weight: 400;
@@ -514,7 +510,6 @@
           font-size: 8.7901px;
           line-height: 10px;
           text-align: center;
-
         }
       }
 
@@ -534,7 +529,7 @@
           border: 2px solid #000000;
           box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
           border-radius: 0px 0px 22px 22px;
-          color: #FABDFF;
+          color: #fabdff;
           background: #000000;
           padding: 10px;
 
@@ -550,7 +545,7 @@
 }
 
 .carousel-service {
-  background: #E5E5E5;
+  background: #e5e5e5;
   margin-top: -50px;
   padding: 50px 0 100px 0;
 
@@ -575,7 +570,7 @@
     align-items: center;
 
     .card {
-      background: #FFFFFF;
+      background: #ffffff;
       border-radius: 21px;
       width: 90%;
       margin: 0 30px;
@@ -587,7 +582,6 @@
       &:nth-child(1) {
         margin-left: -60%;
         opacity: 0.6;
-
 
         @include respond-below(sm) {
           margin-left: -90%;
@@ -677,7 +671,6 @@
   }
 
   .profile-img {
-
     @include respond-below(sm) {
       margin: 2px;
     }
@@ -767,12 +760,12 @@
     }
 
     &:nth-child(6) {
-      border: 10px solid #B5CAFF;
+      border: 10px solid #b5caff;
       border-radius: 50%;
       position: relative;
 
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         background: url("../../../public/assets/service/profile/star.png");
         width: 184px;
@@ -802,8 +795,6 @@
 }
 
 .service-wrapper {
-
-
   .social-icons {
     position: absolute;
     bottom: 25px;
@@ -820,7 +811,6 @@
     }
 
     h1 {
-
       @include respond-below(sm) {
         margin: 0;
       }
