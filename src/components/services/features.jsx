@@ -24,7 +24,7 @@ function Features({ color }) {
       id: 2,
       title: "Lorem Ipsum Is Simply Dummy",
       description:
-          "It is a long established fact that a reader will be distracted by the",
+        "It is a long established fact that a reader will be distracted by the",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ function Features({ color }) {
       id: 3,
       title: "Lorem Ipsum Is Simply Dummy",
       description:
-          "It is a long established fact that a reader will be distracted by the",
+        "It is a long established fact that a reader will be distracted by the",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -67,9 +67,7 @@ function Features({ color }) {
       <div className="row">
         <div className="col-lg-12">
           {/* <p className="service-content__sub-title">Features</p> */}
-          <h1 className="service-content__title">
-            Key Features
-          </h1>
+          <h1 className="service-content__title mt-5">Key Features</h1>
 
           <div className="row justify-content-center">
             {serviceContent?.map(({ id, title, description, icon }) => (
@@ -77,14 +75,14 @@ function Features({ color }) {
                 <div className="animated-card features-width">
                   <div className={`background card h-100  ${bg}`}>
                     <div className="card-body">
-                     <div className="row align-items-center">
-                       <div className="col-2">
-                         <div className="card-icon shadow-sm">{icon}</div>
-                       </div>
-                       <div className="col-10">
-                         <h3 className="card-title">{title}</h3>
-                       </div>
-                     </div>
+                      <div className="row align-items-center">
+                        <div className="col-2">
+                          <div className="card-icon shadow-sm">{icon}</div>
+                        </div>
+                        <div className="col-10">
+                          <h3 className="card-title">{title}</h3>
+                        </div>
+                      </div>
                       <p className="card-text">{description}</p>
                     </div>
                   </div>
