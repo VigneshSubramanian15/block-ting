@@ -150,13 +150,17 @@ function WhyService() {
         }
     ]
 
-    return <div>
-        <h1 className="cms-title cms-title-three text-center">Why Us</h1>
-        <div className="help-description">
-            <p>
-                It is a long established fact that a reader will be distracted by the Lights Flashed It is a long
-                established fact that a reader will be distracted by the Lights Flashed
-            </p>
+    return <div className="container">
+        <div className="row">
+            <div className="col-md-12">
+                <h1 className="cms-title cms-title-three text-center">Why Us</h1>
+                <div className="help-description">
+                    <p>
+                        It is a long established fact that a reader will be distracted by the Lights Flashed It is a long
+                        established fact that a reader will be distracted by the Lights Flashed
+                    </p>
+                </div>
+            </div>
         </div>
         <div className="row justify-content-center why-section">
             {whyData?.map(({id, title, description, icon}) =>

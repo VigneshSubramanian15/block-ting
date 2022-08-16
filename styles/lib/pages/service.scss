@@ -190,6 +190,11 @@
 
       @include respond-below(sm) {
         width: 100%;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 15px;
+        text-align: center;
+        margin-top: 0;
       }
     }
 
@@ -416,7 +421,7 @@
 
 
     &__wrapper {
-      width: 80%;
+      width: 100%;
 
       svg {
         margin-bottom: 10px;
@@ -840,6 +845,18 @@
 
     @include respond-below(sm) {
       margin: -5px 0 50px 0;
+    }
+  }
+
+  svg{
+    margin-top: 200px;
+    margin-bottom: 50px;
+    width: 100%;
+
+    @include respond-below(sm) {
+      margin: 0;
+      height: 200px;
+      width: 100%;
     }
   }
 }

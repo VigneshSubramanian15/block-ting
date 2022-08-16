@@ -63,7 +63,7 @@ function Features({ color }) {
       ? "brand-building-ico"
       : "product-growth-ico";
   return (
-    <div className="container-fluid py-5 service-content">
+    <div className="container py-5 service-content">
       <div className="row">
         <div className="col-lg-12">
           {/* <p className="service-content__sub-title">Features</p> */}
