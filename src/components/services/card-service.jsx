@@ -34,7 +34,7 @@ function CardService() {
           </h1>
         </div>
       </div>
-      <div className="row justify-content-center p-4 p-md-0">
+      <div className="row justify-content-center my-5 p-4 p-md-0">
         {card?.map(({ id, date, firstname, lastname, description, img }) => (
           <div className="col-6 col-xl-4 mb-4">
             <div className="card">
