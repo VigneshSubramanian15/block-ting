@@ -45,7 +45,12 @@ function CardService() {
                 <div className="card-title">
                   {firstname} <br /> <span>{lastname}</span>
                 </div>
-                <div className="card-subtitle">{description}</div>
+                <div
+                  className="card-subtitle"
+                  style={{ fontWeight: 200, textAlign: "center" }}
+                >
+                  {description}
+                </div>
               </div>
               <div className="card-footer">
                 <button type="button">Contact</button>

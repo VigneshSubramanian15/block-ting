@@ -3,7 +3,7 @@ function BannerAdvisory() {
     <div>
       <div className="row position-relative">
         <div className="col-xl-6" style={{ zIndex: 222 }}>
-          <p>
+          <p style={{ fontWeight: 500 }}>
             BlockTing advisory board has been formed to offer a comprehensive
             support to our clients. With experts joining our board, we have the
             capability to provide critical advice, consultation, and suggestions

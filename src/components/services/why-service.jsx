@@ -278,7 +278,9 @@ function WhyService() {
     <div className="container">
       <div className="row">
         <div className="col-md-12">
-          <h1 className="cms-title cms-title-three text-center my-5">Why Us</h1>
+          <h1 className="cms-title cms-title-three text-center mt-5 mb-2">
+            Why Us
+          </h1>
           <div className="help-description mb-5">
             <p>
               It is a long established fact that a reader will be distracted by

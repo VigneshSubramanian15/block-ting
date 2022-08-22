@@ -7,28 +7,34 @@ import ListTalk from "../src/components/lets-talk/list-talk";
 import BadgeTwoTalk from "../src/components/lets-talk/badge-two-talk";
 import CardTalk from "../src/components/lets-talk/card-talk";
 
-function LetsTalk(){
-    return <div className="section-lets-talk">
-        <Head>
-            <title>Blockting - Lets Talk</title>
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        </Head>
-        <Header page={"our-solutions"} />
-        <div className="container">
-            <div className="row">
-                <div className="col-xl-12">
-                    <h1 className="cms-title cms-title-one">How we can help you</h1>
-                    <BadgeTalk/>
-                    <ListTalk/>
-                    <h1 className="cms-title cms-title-two  text-center">How we can help you</h1>
-                    <BadgeTwoTalk/>
-                    <CardTalk/>
-                </div>
-            </div>
+function LetsTalk() {
+  return (
+    <div className="section-lets-talk">
+      <Head>
+        <title>Blockting - Lets Talk</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <Header page={"our-solutions"} />
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-12">
+            <h1 className="cms-title cms-title-one mb-5">
+              How we can help you
+            </h1>
+            <BadgeTalk />
+            <ListTalk />
+            <h1 className="cms-title cms-title-two  text-center">
+              How we can help you
+            </h1>
+            <BadgeTwoTalk />
+            <CardTalk />
+          </div>
         </div>
-        <GetStarted/>
-        <Footer/>
+      </div>
+      <GetStarted />
+      <Footer />
     </div>
+  );
 }
 
-export default LetsTalk
+export default LetsTalk;

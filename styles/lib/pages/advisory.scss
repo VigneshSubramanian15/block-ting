@@ -159,7 +159,10 @@
 
       p {
         padding: 0 50px;
-
+        text-align: center;
+        font-weight: 400;
+        max-width: 1012px;
+        margin: 30px auto;
         @include respond-below(sm) {
           padding: 0;
         }

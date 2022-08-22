@@ -3,13 +3,13 @@
     margin: 150px 0 20px 0;
   }
 
-  .lets-banner{
+  .lets-banner {
     width: 50%;
     position: absolute;
     bottom: -100px;
     right: 0;
 
-    @include respond-below(sm){
+    @include respond-below(sm) {
       width: 100%;
       position: unset;
     }
@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
 
-    @include respond-below(sm){
+    @include respond-below(sm) {
       font-weight: 400;
       font-size: 9.44314px;
       line-height: 11px;
@@ -36,13 +36,13 @@
       position: absolute;
       left: -50px;
 
-      @include respond-below(sm){
+      @include respond-below(sm) {
         margin-left: 0;
         left: -30px;
       }
 
-      img{
-        @include respond-below(sm){
+      img {
+        @include respond-below(sm) {
           height: 15px;
         }
       }
@@ -82,8 +82,8 @@
       border: 3px solid #000000;
       border-radius: 20px;
 
-      &-body{
-        @include respond-below(sm){
+      &-body {
+        @include respond-below(sm) {
           padding: 5px;
         }
       }
@@ -172,13 +172,12 @@
             font-weight: 700;
             font-size: 11.8952px;
             line-height: 14px;
-
           }
         }
 
         img {
-          width: 35px;
-          height: 35px;
+          width: 51px;
+          height: 51px;
           object-fit: contain;
           position: absolute;
           top: -20px;
@@ -194,7 +193,6 @@
       padding-right: 100px;
     }
   }
-
 
   .cms-title-two {
     @include respond-below(sm) {
@@ -215,7 +213,6 @@
 
       @include respond-below(sm) {
         margin-right: 10px;
-
       }
     }
   }
@@ -236,6 +233,5 @@
         }
       }
     }
-
   }
 }
